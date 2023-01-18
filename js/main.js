@@ -14,6 +14,21 @@ $('.marquee-with-options').marquee({
     duplicated: true,
   });
 
+  $('.marquee-with-options2').marquee({
+    duration: 25000,
+    gap: 0,
+    delayBeforeStart: 0,
+    direction: 'left',
+    duplicated: true,
+  });
+  $('.marquee-with-optionsSiderFooter').marquee({
+    duration: 30000,
+    gap: 0,
+    delayBeforeStart: 0,
+    direction: 'left',
+    duplicated: true,
+  });
+
 
 var swiper = new Swiper(".swiperHome", {
     loop: true,
@@ -51,7 +66,31 @@ var swiper2 = new Swiper(".swiperCategoriasHome", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-  });
+});
+
+
+document.body.addEventListener("mousemove", e => {
+    gsap.to(".ht-cursor", {
+        x: e.clientX,
+        y: e.clientY,
+    })
+})
+
+$("section.productosHome .swiperCategoriasHome .swiper-slide").hover(function () {
+    $(".ht-cursor").addClass("mostrar");
+}, function () {
+    $(".ht-cursor").removeClass("mostrar");
+});
+
+var swiper3 = new Swiper(".swiperBlogHome", {
+  slidesPerView: 3.4,
+  spaceBetween: 30,
+  freeMode: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
   
   
   
