@@ -21,6 +21,15 @@
     max-width: 1460px;
     margin: 0 auto;
 }
+body{
+    background-color: #024670;
+}
+main{
+    background-color: #fff;
+    border-radius: 0px 0px 40px 40px;
+    margin-top: 122px;
+    margin-bottom: 633px;
+}
 ul{
     li{
         list-style: none;
@@ -81,6 +90,15 @@ a{
     100%{
         transform: rotate(360deg);
     }
+}
+
+header{
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
 }
 
 nav{
@@ -345,6 +363,12 @@ section.productosHome{
             left: auto;
         }
     }
+    .swiperCategoriasHome.page{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 9px;
+        row-gap: 9px;
+    }
     
 }
 
@@ -505,7 +529,7 @@ section.clientes{
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
             width: 100%;
             position: relative;
-            z-index: 5;
+            z-index: 1;
         }
     }
     .part2{
@@ -546,19 +570,15 @@ section.organizacion{
     overflow: hidden;
     .container{
         display: flex;
-        //align-items: center;
-        //grid-gap: 100px;
         .part1{
             width: 50%;
             color: #fff;
             padding: 85px 0;
-            position: relative;
-            //transform: translateY(-60px);
             padding-right: 125px;
             position: relative;
             height: fit-content;
             margin-top: 50px;
-            //background-color: var(--color-azul);
+            z-index: 1;
             h2{
                 font-family: var(--fuente-Montserrat);
                 font-weight: 800;
@@ -588,6 +608,7 @@ section.organizacion{
         .part2{
             width: 50%;
             position: relative;
+            z-index: 1;
             img{
                 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
                 border-radius: 10px;
@@ -712,13 +733,120 @@ footer{
     background-color: var(--color-azul);
     color: #fff;
     overflow: hidden;
+    font-family: var(--fuente-Montserrat);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    a{
+        color: #fff;
+    }
     .part1{
         padding: 130px 0;
+        height: 66px;
         span{
-            font-family: var(--fuente-Montserrat);
-            font-style: normal;
             font-weight: 500;
             font-size: 50px;
+        }
+    }
+    .part2{
+        overflow: hidden;
+        display: flex;
+        height: 50px;
+        .part2-1,
+        .part2-2{
+            overflow: hidden;
+            width: 50%;
+            position: relative;
+        }
+        .part2-1{
+            img{
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+        }
+        .part2-2{
+            img{
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+        }
+    }
+    .part3{
+        margin-top: 100px;
+        .container{
+            display: flex;
+            justify-content: space-between;
+            .part3-1{
+                font-family: var(--fuente-Montserrat);
+                font-weight: 800;
+                .wtp{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 30px;
+                    img{
+                        margin-right: 8px;
+                    }
+                    span{
+                        font-size: 25px;
+                    }
+                    p{
+                        font-size: 35px;
+                    }
+                }
+                .redes{
+                    display: flex;
+                    align-items: center;
+                    span{
+                        font-size: 20px;
+                        margin-right: 15px;
+                    }
+                    .icons{
+                        display: flex;
+                        grid-gap: 20px;
+                    }
+                }
+            }
+            li{
+                margin: 2px 0;
+                a{
+                    font-weight: 700;
+                }
+            }
+            .part3-4{
+                span:first-child{
+                    margin-top: 0;
+                }
+                span{
+                    font-weight: 800;
+                    margin-top: 20px;
+                    display: block;
+                }
+                li{
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    .pie{
+        margin-top: 30px;
+        margin-bottom: 10px;
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            p{
+                font-size: 16px;
+            }
+            .corazon{
+                height: 16px;
+                margin-right: 5px;
+            }
         }
     }
 }
