@@ -90,7 +90,7 @@ header {
     background-color: var(--color-azul);
     border-radius: 0 0 30px 30px;
     transform: translateY(-100%);
-    transition: 0.3s linear; }
+    transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1); }
     header .submenu .container {
       display: flex;
       padding: 0 90px; }

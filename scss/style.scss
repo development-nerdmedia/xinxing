@@ -110,7 +110,7 @@ header{
         background-color: var(--color-azul);        
         border-radius: 0 0 30px 30px; 
         transform: translateY(-100%);
-        transition: 0.3s linear;
+        transition: transform .7s cubic-bezier(.19,1,.22,1);
         .container{
             display: flex;
             padding: 0 90px;
