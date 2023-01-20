@@ -41,6 +41,20 @@ var swiper = new Swiper(".swiperHome", {
   },
 });
 
+
+$(document).ready(function () {
+  $("header .fex").hover(function () {
+    document.querySelector("header").classList.add("open")
+  })
+  $("main").hover(function () {
+    document.querySelector("header").classList.remove("open")
+  }), function () {
+    document.querySelector("header").classList.remove("open")
+  };
+});
+
+
+
 const tituloSlider = document.querySelector("section.sliderHome .container .part1 .info h1")
 const tituloChinoSlider = document.querySelector("section.sliderHome .container .part1 h2")
 const descripcionSlider = document.querySelector("section.sliderHome .container .part1 .info p")
@@ -76,7 +90,7 @@ document.body.addEventListener("mousemove", e => {
   })
 })
 
-$("section.productosHome .swiperCategoriasHome .swiper-slide").hover(function () {
+$(".swiperCategoriasHome .swiper-slide").hover(function () {
   $(".ht-cursor").addClass("mostrar");
 }, function () {
   $(".ht-cursor").removeClass("mostrar");
