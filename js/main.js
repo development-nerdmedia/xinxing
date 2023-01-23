@@ -30,58 +30,18 @@ $('.marquee-with-optionsSiderFooter').marquee({
 });
 
 
-var swiper = new Swiper(".swiperHome", {
-  loop: true,
-  autoplay: {
-    delay: 8000,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
-
-
 $(document).ready(function () {
-  $("header .fex").hover(function () {
-    document.querySelector("header").classList.add("open")
-  })
   $("main").hover(function () {
     document.querySelector("header").classList.remove("open")
   }), function () {
     document.querySelector("header").classList.remove("open")
   };
+  $("footer").hover(function () {
+    document.querySelector("header").classList.remove("open")
+  }), function () {
+    document.querySelector("header").classList.remove("open")
+  };
 });
-
-
-
-const tituloSlider = document.querySelector("section.sliderHome .container .part1 .info h1")
-const tituloChinoSlider = document.querySelector("section.sliderHome .container .part1 h2")
-const descripcionSlider = document.querySelector("section.sliderHome .container .part1 .info p")
-
-swiper.on('slideChange', function () {
-  var TituloDiapo = document.querySelector(".swiperHome .swiper-slide-next .info .titulo").textContent
-  var tituloChinoDiapo = document.querySelector(".swiperHome .swiper-slide-next .info .tituloChino").textContent
-  var descripcionDiapo = document.querySelector(".swiperHome .swiper-slide-next .info .descripcion").textContent
-
-  tituloSlider.innerHTML = TituloDiapo
-  tituloChinoSlider.innerHTML = tituloChinoDiapo
-  descripcionSlider.innerHTML = descripcionDiapo
-});
-
-
-var swiper2 = new Swiper(".slideInHome .swiperCategoriasHome", {
-  slidesPerView: 4,
-  spaceBetween: 9,
-  slidesPerGroup: 1,
-  loop: true,
-  loopFillGroupWithBlank: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-
 
 document.body.addEventListener("mousemove", e => {
   gsap.to(".ht-cursor", {
@@ -96,17 +56,101 @@ $(".swiperCategoriasHome .swiper-slide").hover(function () {
   $(".ht-cursor").removeClass("mostrar");
 });
 
-var swiper3 = new Swiper(".swiperBlogHome", {
-  slidesPerView: 3.4,
-  spaceBetween: 30,
-  freeMode: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+document.addEventListener("click", (e) => {
+  if (e.target.closest("nav .part1 ul li.fex img")) {
+    document.querySelector("header").classList.toggle("open")
+  }
+})
+
+MyApp = {
+  swiperHome: {
+    init: function () {
+      var swiper = new Swiper(".swiperHome", {
+        loop: true,
+        autoplay: {
+          delay: 8000,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+
+      const tituloSlider = document.querySelector("section.sliderHome .container .part1 .info h1")
+      const tituloChinoSlider = document.querySelector("section.sliderHome .container .part1 h2")
+      const descripcionSlider = document.querySelector("section.sliderHome .container .part1 .info p")
+
+      swiper.on('slideChange', function () {
+        var TituloDiapo = document.querySelector(".swiperHome .swiper-slide-next .info .titulo").textContent
+        var tituloChinoDiapo = document.querySelector(".swiperHome .swiper-slide-next .info .tituloChino").textContent
+        var descripcionDiapo = document.querySelector(".swiperHome .swiper-slide-next .info .descripcion").textContent
+
+        tituloSlider.innerHTML = TituloDiapo
+        tituloChinoSlider.innerHTML = tituloChinoDiapo
+        descripcionSlider.innerHTML = descripcionDiapo
+      });
+    }
   },
-});
+  swiperBlogHome: {
+    init: function () {
+      var swiper3 = new Swiper(".swiperBlogHome", {
+        slidesPerView: 3,/**3.4 */
+        spaceBetween: 30,
+        freeMode: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    }
+  },
+  swiperCategoriasHome: {
+    init: function () {
+      var swiper2 = new Swiper(".slideInHome .swiperCategoriasHome", {
+        slidesPerView: 4,
+        spaceBetween: 9,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    }
+  },
+  swiperProductosDestacados: {
+    init: function () {
+      var swiper4 = new Swiper(".productosDestacados .swiperProductosDestacados", {
+        slidesPerView: 3,
+        //spaceBetween: 9,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    }
+  }
+}
 
+if ($('.swiperHome').length > 0) {
+  MyApp.swiperHome.init();
+}
 
+if ($('.swiperBlogHome').length > 0) {
+  MyApp.swiperBlogHome.init();
+}
+
+if ($('.swiperCategoriasHome').length > 0) {
+  MyApp.swiperCategoriasHome.init();
+}
+
+if ($('.swiperProductosDestacados').length > 0) {
+  MyApp.swiperProductosDestacados.init();
+}
 
 
 
