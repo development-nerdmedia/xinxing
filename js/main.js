@@ -133,6 +133,55 @@ MyApp = {
         },
       });
     }
+  },
+  contentCategorias: {
+    init: function () {
+
+      //var categoriaNovedad = localStorage.getItem("CatNovedad");
+      //if (categoriaNovedad == "none") {
+      //document.querySelector("#categorias li").classList.add("select");
+      //}
+
+      let listaTitle = [];
+      const enlaces = document.querySelectorAll('#categorias li');
+      for (let i = 0; i < enlaces.length; i++) {
+        textoitem = enlaces[i].textContent;
+        listaTitle.push(textoitem);
+      }
+
+      // if (listaTitle.includes(categoriaNovedad)) {
+      //   for (let y = 0; y < enlaces.length; y++) {
+      //     if (categoriaNovedad === enlaces[y].textContent) {
+      //       document.querySelector("#categorias li").classList.remove("select");
+      //       enlaces[y].classList.add('select')
+      //     }
+      //   }
+      // }
+
+      $('.itemArticulo').hide();
+
+      var categoryMain = document.querySelector('#categorias li.select').innerHTML;
+
+      if (categoryMain === "Todos") {
+        $(`.itemArticulo`).show(0);
+      } else {
+        $(`.itemArticulo[data-category="${categoryMain}"]`).show();
+      }
+
+      enlaces.forEach((elemento) => {
+        elemento.addEventListener('click', (evento) => {
+          evento.preventDefault();
+          enlaces.forEach((enlace) => enlace.classList.remove('select'));
+          evento.target.classList.add('select');
+          var categoria = evento.target.innerHTML;
+          $(`.itemArticulo`).not(`[data-category="${categoria}"]`).hide();
+          $(`.itemArticulo[data-category="${categoria}"]`).show();
+          if (categoria === "Todos") {
+            $(`.itemArticulo`).show();
+          }
+        })
+      })
+    }
   }
 }
 
@@ -152,6 +201,17 @@ if ($('.swiperProductosDestacados').length > 0) {
   MyApp.swiperProductosDestacados.init();
 }
 
+if ($('.categorias').length > 0) {
+  MyApp.contentCategorias.init();
+}
+
+
+// if ($(".articulo .part2 .img").length > 0) {
+//   $(".articulo .part2 .img").stick_in_parent({
+//     offset_top: 0,
+//     offset_right: 52,
+//   });
+// }
 
 
 
