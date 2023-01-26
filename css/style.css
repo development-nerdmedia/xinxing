@@ -1462,3 +1462,230 @@ section.contactoPage {
       font-weight: 800;
       font-size: 25px;
       color: var(--color-rojo); }
+  section.contactoPage .formulario {
+    margin-top: 50px; }
+    section.contactoPage .formulario form fieldset {
+      border: none; }
+    section.contactoPage .formulario form .form-colum {
+      display: flex;
+      justify-content: space-between;
+      grid-gap: 125px; }
+    section.contactoPage .formulario form .form-group {
+      width: 100%;
+      margin-bottom: 50px;
+      position: relative; }
+      section.contactoPage .formulario form .form-group::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--color-azul);
+        border-radius: 15px; }
+      section.contactoPage .formulario form .form-group label {
+        font-family: var(--fuente-Montserrat);
+        font-weight: 600;
+        font-size: 20px;
+        color: var(--color-azul);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        transition: 0.2s linear;
+        pointer-events: none; }
+      section.contactoPage .formulario form .form-group input, section.contactoPage .formulario form .form-group select, section.contactoPage .formulario form .form-group textarea {
+        font-family: var(--fuente-Montserrat);
+        font-weight: 600;
+        font-size: 20px;
+        color: var(--color-azul);
+        width: 100%;
+        position: relative;
+        outline: none !important;
+        appearance: none;
+        background-color: transparent;
+        transition: 0.2s linear;
+        border: none; }
+      section.contactoPage .formulario form .form-group input {
+        padding: 13px 0; }
+      section.contactoPage .formulario form .form-group input[type=number] {
+        -moz-appearance: textfield; }
+      section.contactoPage .formulario form .form-group input[type=number]::-webkit-inner-spin-button,
+      section.contactoPage .formulario form .form-group input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none; }
+      section.contactoPage .formulario form .form-group textarea {
+        height: 100px; }
+    section.contactoPage .formulario form .form-group.formmensaje label {
+      top: 12px; }
+    section.contactoPage .formulario form .form-group.focusin label,
+    section.contactoPage .formulario form .form-group.ok label {
+      top: 0px;
+      font-size: 18px; }
+    section.contactoPage .formulario form .form-group.error::before {
+      background-color: var(--color-rojo); }
+    section.contactoPage .formulario form .form-group.formmensaje.focusin label,
+    section.contactoPage .formulario form .form-group.formmensaje.ok label {
+      top: -11px;
+      font-size: 18px; }
+    section.contactoPage .formulario form .checkbox-box {
+      display: flex; }
+      section.contactoPage .formulario form .checkbox-box input {
+        -webkit-appearance: auto;
+        width: 0;
+        display: none; }
+      section.contactoPage .formulario form .checkbox-box label {
+        width: 20px;
+        height: 20px;
+        border: 2px solid var(--color-azul);
+        display: inline-block;
+        cursor: pointer;
+        margin-top: 2px;
+        position: relative; }
+        section.contactoPage .formulario form .checkbox-box label.activo::before {
+          content: '';
+          position: absolute;
+          width: 3px;
+          height: 8px;
+          background-color: var(--color-rojo);
+          transform: rotate(-30deg);
+          left: 4px;
+          bottom: 1px;
+          border-radius: 10px; }
+        section.contactoPage .formulario form .checkbox-box label.activo::after {
+          content: '';
+          position: absolute;
+          width: 3px;
+          height: 14px;
+          background-color: var(--color-rojo);
+          transform: rotate(30deg);
+          right: 4.5px;
+          top: 1px;
+          border-radius: 10px; }
+      section.contactoPage .formulario form .checkbox-box p {
+        margin-top: 0;
+        margin-left: 10px;
+        text-align: start;
+        font-family: var(--fuente-Montserrat);
+        font-weight: 600;
+        font-size: 20px;
+        color: var(--color-azul); }
+        section.contactoPage .formulario form .checkbox-box p a {
+          color: var(--color-azul);
+          text-decoration: underline; }
+    section.contactoPage .formulario form .checkbox-box.error p {
+      color: var(--color-rojo); }
+      section.contactoPage .formulario form .checkbox-box.error p a {
+        color: var(--color-rojo); }
+    section.contactoPage .formulario form .checkbox-box.error label {
+      border: 2px solid var(--color-rojo); }
+    section.contactoPage .formulario form .btn-enviar {
+      margin-top: 50px;
+      font-family: var(--fuente-Montserrat);
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--color-rojo);
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      section.contactoPage .formulario form .btn-enviar img {
+        margin-right: 30px; }
+      section.contactoPage .formulario form .btn-enviar button {
+        background-color: transparent;
+        border: none;
+        display: flex;
+        align-items: center;
+        font-family: var(--fuente-Montserrat);
+        font-weight: 800;
+        font-size: 20px;
+        color: var(--color-rojo);
+        cursor: pointer; }
+
+section.tarjetaContacto {
+  padding: 100px 0;
+  background-color: var(--color-azul); }
+  section.tarjetaContacto h2 {
+    font-family: var(--fuente-Montserrat);
+    font-weight: 800;
+    font-size: 35px;
+    color: #fff;
+    text-align: center; }
+  section.tarjetaContacto .datos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 30px; }
+    section.tarjetaContacto .datos .item {
+      display: flex;
+      color: #fff;
+      align-items: flex-start; }
+      section.tarjetaContacto .datos .item img {
+        width: 24.87px;
+        margin-top: 5px;
+        margin-right: 10px; }
+      section.tarjetaContacto .datos .item .text span {
+        font-family: var(--fuente-Montserrat);
+        font-weight: 800;
+        font-size: 25px;
+        line-height: 146.9%; }
+      section.tarjetaContacto .datos .item .text p {
+        font-family: var(--fuente-Montserrat);
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 146.9%; }
+
+section.datosTienda {
+  padding: 100px 0; }
+  section.datosTienda .content {
+    display: flex;
+    grid-gap: 65px; }
+    section.datosTienda .content .part1 {
+      width: 50%;
+      padding-left: 16.1vw; }
+      section.datosTienda .content .part1 img {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 10px; }
+      section.datosTienda .content .part1 .logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 50px;
+        margin-bottom: 20px; }
+        section.datosTienda .content .part1 .logo img {
+          width: 270px;
+          filter: none;
+          border-radius: 0px; }
+        section.datosTienda .content .part1 .logo p {
+          font-family: var(--fuente-Montserrat);
+          font-weight: 800;
+          font-size: 35px;
+          color: var(--color-azul); }
+      section.datosTienda .content .part1 .info {
+        color: var(--color-azul); }
+        section.datosTienda .content .part1 .info span {
+          font-family: var(--fuente-Montserrat);
+          font-weight: 800;
+          font-size: 25px;
+          padding-top: 30px;
+          display: inline-block; }
+        section.datosTienda .content .part1 .info span:first-child {
+          padding-top: 0; }
+        section.datosTienda .content .part1 .info p {
+          font-family: var(--fuente-Lato);
+          font-weight: 400;
+          font-size: 20px;
+          color: #000; }
+    section.datosTienda .content .part2 {
+      width: 50%; }
+      section.datosTienda .content .part2 .mapa {
+        height: 100%; }
+        section.datosTienda .content .part2 .mapa iframe {
+          width: 100%;
+          height: 100%; }
+
+body.page-gracias {
+  background-color: #fff; }
+  body.page-gracias main {
+    background-color: #fff;
+    border-radius: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    height: 100vh; }

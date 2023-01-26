@@ -31,6 +31,11 @@ $('.marquee-with-optionsSiderFooter').marquee({
 
 
 $(document).ready(function () {
+  $("header .fex").hover(function () {
+    document.querySelector("header").classList.add("open")
+  }), function () {
+    document.querySelector("header").classList.remove("open")
+  };
   $("main").hover(function () {
     document.querySelector("header").classList.remove("open")
   }), function () {
@@ -57,8 +62,8 @@ $(".swiperCategoriasHome .swiper-slide").hover(function () {
 });
 
 document.addEventListener("click", (e) => {
-  if (e.target.closest("nav .part1 ul li.fex img")) {
-    document.querySelector("header").classList.toggle("open")
+  if (e.target.closest(".checkbox-box input")) {
+    document.querySelector(".labelPoliticas").classList.toggle("activo");
   }
 })
 
@@ -182,6 +187,126 @@ MyApp = {
         })
       })
     }
+  },
+  validate:{
+    init: function () {
+      var formespacio = document.querySelectorAll('.form-group');
+      var formespacioinput = document.querySelectorAll('.form-input');
+      var formespacioselect = document.querySelectorAll('form select');
+
+      $(document).on("wheel", "input[type=number]", function (e) { $(this).blur(); });
+
+      function inputcheck() {
+        for (let i = 0; i < formespacioinput.length; i++) {
+            if (!formespacioinput[i].value) {
+                formespacioinput[i].parentElement.parentElement.classList.remove("ok");
+            } else {
+                formespacioinput[i].parentElement.parentElement.classList.add("ok");
+            }
+        }
+      }
+
+      function validateInput(e) {
+        for (let y = 0; y < formespacioinput.length; y++) {
+            if (!formespacioinput[y].value) {
+                formespacioinput[y].parentElement.parentElement.classList.add("error");
+                e.preventDefault();
+            } else {
+                formespacioinput[y].parentElement.parentElement.classList.remove("error");
+            }
+        }
+      }
+
+      function validateSelect(e) {
+        for (let i = 0; i < formespacioselect.length; i++) {
+            if (formespacioselect[i].value == "Tipo de evento:") {
+                formespacioselect[i].classList.add("error");
+                e.preventDefault();
+            } else {
+                formespacioselect[i].classList.remove("error");
+            }
+        }
+      }
+
+      $('.form-input').on('change', () => {
+        formespacioinput.forEach(element => {
+            if (!element.value == "") {
+                element.parentElement.parentElement.classList.add("ok");
+            } else {
+                element.parentElement.parentElement.classList.remove("ok");
+            }
+        });
+      });
+
+      function validateCheck(e){
+        formespaciocheck = document.querySelectorAll(".formulario input[type='checkbox']");
+        for (let i = 0; i < formespaciocheck.length; i++) {
+          //if (formespaciocheck[i].classList.contains("activo")) {            
+            //e.preventDefault();
+            //console.log("a");
+          //}
+          if (formespaciocheck[i].checked) {
+            formespaciocheck[i].parentElement.parentElement.classList.remove("error");
+          } else {
+            formespaciocheck[i].parentElement.parentElement.classList.add("error");
+          }
+        }
+      }
+
+      document.addEventListener("click", function (e) {
+        if (e.target.closest(".form-input")) {
+            formespacio.forEach(function (shinyItem) {
+                shinyItem.classList.remove("focusin");
+            })
+            e.target.parentElement.parentElement.classList.add("focusin");
+        } else {
+            formespacio.forEach(function (shinyItem) {
+                shinyItem.classList.remove("focusin");
+            });
+        }
+
+        if (e.target.closest("form select")) {
+            formespacioselect.forEach(function (shinyItem2) {
+                shinyItem2.parentElement.parentElement.parentElement.classList.remove("open");
+            })
+            e.target.parentElement.parentElement.parentElement.classList.add("open");
+        } else {
+            formespacioselect.forEach(function (shinyItem2) {
+                shinyItem2.parentElement.parentElement.parentElement.classList.remove("open");
+            });
+        }
+
+
+        inputcheck()
+
+        if (e.target.closest("form button")) {
+
+            validateInput(e)
+
+            validateSelect(e)
+
+            validateCheck(e)
+
+        }
+      })
+
+      document.addEventListener("keydown", function (event) {
+        if (event.keyCode == 9) {
+            for (let i = 0; i < formespacioinput.length; i++) {
+                formespacioinput[i].addEventListener('focusin', (event) => {
+                    formespacioinput[i].parentElement.parentElement.classList.add('focusin');
+                });
+                formespacioinput[i].addEventListener('focusout', (event) => {
+                    formespacioinput[i].parentElement.parentElement.classList.remove('focusin');
+                    if (formespacioinput[i].value) {
+                        formespacioinput[i].parentElement.parentElement.classList.add('ok');
+                    }
+                });
+            }
+        }
+      })
+
+    }
   }
 }
 
@@ -203,6 +328,10 @@ if ($('.swiperProductosDestacados').length > 0) {
 
 if ($('.categorias').length > 0) {
   MyApp.contentCategorias.init();
+}
+
+if ($('.contactoPage .formulario').length > 0) {
+  MyApp.validate.init();
 }
 
 
