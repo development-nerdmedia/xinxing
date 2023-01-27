@@ -764,14 +764,36 @@ footer {
         margin: 2px 0; }
         footer .part3 .containerCerrado li a {
           font-weight: 700; }
-      footer .part3 .containerCerrado .part3-4 span:first-child {
-        margin-top: 0; }
-      footer .part3 .containerCerrado .part3-4 span {
-        font-weight: 800;
-        margin-top: 20px;
-        display: block; }
-      footer .part3 .containerCerrado .part3-4 li {
-        font-weight: 600; }
+      footer .part3 .containerCerrado .part3-2 li {
+        font-size: 20px;
+        font-family: var(--fuente-Lato); }
+      footer .part3 .containerCerrado .part3-3 {
+        max-width: 281px; }
+        footer .part3 .containerCerrado .part3-3 ul {
+          margin-bottom: 20px; }
+          footer .part3 .containerCerrado .part3-3 ul li {
+            font-size: 20px;
+            font-family: var(--fuente-Lato); }
+        footer .part3 .containerCerrado .part3-3 img {
+          margin-right: 15px; }
+        footer .part3 .containerCerrado .part3-3 a.libro {
+          display: flex;
+          font-family: var(--fuente-Montserrat);
+          font-weight: 800;
+          font-size: 20px;
+          color: #fff; }
+      footer .part3 .containerCerrado .part3-4 {
+        font-family: var(--fuente-Montserrat); }
+        footer .part3 .containerCerrado .part3-4 span:first-child {
+          margin-top: 0; }
+        footer .part3 .containerCerrado .part3-4 span {
+          font-weight: 800;
+          font-size: 20px;
+          margin-top: 20px;
+          display: block; }
+        footer .part3 .containerCerrado .part3-4 li {
+          font-weight: 600;
+          font-size: 20px; }
   footer .pie {
     margin-top: 30px;
     margin-bottom: 10px; }
@@ -1462,143 +1484,158 @@ section.contactoPage {
       font-weight: 800;
       font-size: 25px;
       color: var(--color-rojo); }
-  section.contactoPage .formulario {
-    margin-top: 50px; }
-    section.contactoPage .formulario form fieldset {
-      border: none; }
-    section.contactoPage .formulario form .form-colum {
-      display: flex;
-      justify-content: space-between;
-      grid-gap: 125px; }
-    section.contactoPage .formulario form .form-group {
+
+.formulario {
+  margin-top: 50px; }
+  .formulario form fieldset {
+    border: none; }
+  .formulario form .form-colum {
+    display: flex;
+    justify-content: space-between;
+    grid-gap: 125px; }
+  .formulario form .form-group {
+    width: 100%;
+    margin-bottom: 50px;
+    position: relative; }
+    .formulario form .form-group::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
       width: 100%;
-      margin-bottom: 50px;
+      height: 2px;
+      background-color: var(--color-azul);
+      border-radius: 15px; }
+    .formulario form .form-group label {
+      font-family: var(--fuente-Montserrat);
+      font-weight: 600;
+      font-size: 20px;
+      color: var(--color-azul);
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      transition: 0.2s linear;
+      pointer-events: none;
+      width: 80%;
+      background-color: #fff; }
+    .formulario form .form-group input, .formulario form .form-group select, .formulario form .form-group textarea {
+      font-family: var(--fuente-Montserrat);
+      font-weight: 600;
+      font-size: 20px;
+      color: var(--color-azul);
+      width: 100%;
+      position: relative;
+      outline: none !important;
+      appearance: none;
+      background-color: transparent;
+      transition: 0.2s linear;
+      border: none; }
+    .formulario form .form-group input,
+    .formulario form .form-group select {
+      padding: 13px 0; }
+    .formulario form .form-group input[type=number] {
+      -moz-appearance: textfield; }
+    .formulario form .form-group input[type=number]::-webkit-inner-spin-button,
+    .formulario form .form-group input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none; }
+    .formulario form .form-group textarea {
+      height: 100px; }
+  .formulario form .form-group.select span::after {
+    content: url(../img/flecha-select.svg);
+    position: absolute;
+    top: 50%;
+    right: 2px;
+    width: 25px;
+    height: 15px;
+    transform: translateY(-50%);
+    pointer-events: none; }
+  .formulario form .form-group.select.open span::after {
+    transform: translateY(-50%) rotate(180deg); }
+  .formulario form .form-group.formmensaje label {
+    top: 12px; }
+  .formulario form .form-group.focusin label,
+  .formulario form .form-group.ok label {
+    top: 0px;
+    font-size: 18px; }
+  .formulario form .form-group.error::before {
+    background-color: var(--color-rojo); }
+  .formulario form .form-group.formmensaje.focusin label,
+  .formulario form .form-group.formmensaje.ok label {
+    top: -11px;
+    font-size: 18px; }
+  .formulario form .checkbox-box {
+    display: flex; }
+    .formulario form .checkbox-box input {
+      -webkit-appearance: auto;
+      width: 0;
+      display: none; }
+    .formulario form .checkbox-box label {
+      width: 20px;
+      height: 20px;
+      border: 2px solid var(--color-azul);
+      display: inline-block;
+      cursor: pointer;
+      margin-top: 2px;
       position: relative; }
-      section.contactoPage .formulario form .form-group::before {
+      .formulario form .checkbox-box label.activo::before {
         content: '';
         position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: var(--color-azul);
-        border-radius: 15px; }
-      section.contactoPage .formulario form .form-group label {
-        font-family: var(--fuente-Montserrat);
-        font-weight: 600;
-        font-size: 20px;
-        color: var(--color-azul);
+        width: 3px;
+        height: 8px;
+        background-color: var(--color-rojo);
+        transform: rotate(-30deg);
+        left: 4px;
+        bottom: 1px;
+        border-radius: 10px; }
+      .formulario form .checkbox-box label.activo::after {
+        content: '';
         position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        transition: 0.2s linear;
-        pointer-events: none; }
-      section.contactoPage .formulario form .form-group input, section.contactoPage .formulario form .form-group select, section.contactoPage .formulario form .form-group textarea {
-        font-family: var(--fuente-Montserrat);
-        font-weight: 600;
-        font-size: 20px;
+        width: 3px;
+        height: 14px;
+        background-color: var(--color-rojo);
+        transform: rotate(30deg);
+        right: 4.5px;
+        top: 1px;
+        border-radius: 10px; }
+    .formulario form .checkbox-box p {
+      margin-top: 0;
+      margin-left: 10px;
+      text-align: start;
+      font-family: var(--fuente-Montserrat);
+      font-weight: 600;
+      font-size: 20px;
+      color: var(--color-azul); }
+      .formulario form .checkbox-box p a {
         color: var(--color-azul);
-        width: 100%;
-        position: relative;
-        outline: none !important;
-        appearance: none;
-        background-color: transparent;
-        transition: 0.2s linear;
-        border: none; }
-      section.contactoPage .formulario form .form-group input {
-        padding: 13px 0; }
-      section.contactoPage .formulario form .form-group input[type=number] {
-        -moz-appearance: textfield; }
-      section.contactoPage .formulario form .form-group input[type=number]::-webkit-inner-spin-button,
-      section.contactoPage .formulario form .form-group input[type=number]::-webkit-outer-spin-button {
-        -webkit-appearance: none; }
-      section.contactoPage .formulario form .form-group textarea {
-        height: 100px; }
-    section.contactoPage .formulario form .form-group.formmensaje label {
-      top: 12px; }
-    section.contactoPage .formulario form .form-group.focusin label,
-    section.contactoPage .formulario form .form-group.ok label {
-      top: 0px;
-      font-size: 18px; }
-    section.contactoPage .formulario form .form-group.error::before {
-      background-color: var(--color-rojo); }
-    section.contactoPage .formulario form .form-group.formmensaje.focusin label,
-    section.contactoPage .formulario form .form-group.formmensaje.ok label {
-      top: -11px;
-      font-size: 18px; }
-    section.contactoPage .formulario form .checkbox-box {
-      display: flex; }
-      section.contactoPage .formulario form .checkbox-box input {
-        -webkit-appearance: auto;
-        width: 0;
-        display: none; }
-      section.contactoPage .formulario form .checkbox-box label {
-        width: 20px;
-        height: 20px;
-        border: 2px solid var(--color-azul);
-        display: inline-block;
-        cursor: pointer;
-        margin-top: 2px;
-        position: relative; }
-        section.contactoPage .formulario form .checkbox-box label.activo::before {
-          content: '';
-          position: absolute;
-          width: 3px;
-          height: 8px;
-          background-color: var(--color-rojo);
-          transform: rotate(-30deg);
-          left: 4px;
-          bottom: 1px;
-          border-radius: 10px; }
-        section.contactoPage .formulario form .checkbox-box label.activo::after {
-          content: '';
-          position: absolute;
-          width: 3px;
-          height: 14px;
-          background-color: var(--color-rojo);
-          transform: rotate(30deg);
-          right: 4.5px;
-          top: 1px;
-          border-radius: 10px; }
-      section.contactoPage .formulario form .checkbox-box p {
-        margin-top: 0;
-        margin-left: 10px;
-        text-align: start;
-        font-family: var(--fuente-Montserrat);
-        font-weight: 600;
-        font-size: 20px;
-        color: var(--color-azul); }
-        section.contactoPage .formulario form .checkbox-box p a {
-          color: var(--color-azul);
-          text-decoration: underline; }
-    section.contactoPage .formulario form .checkbox-box.error p {
+        text-decoration: underline; }
+  .formulario form .checkbox-box.error p {
+    color: var(--color-rojo); }
+    .formulario form .checkbox-box.error p a {
       color: var(--color-rojo); }
-      section.contactoPage .formulario form .checkbox-box.error p a {
-        color: var(--color-rojo); }
-    section.contactoPage .formulario form .checkbox-box.error label {
-      border: 2px solid var(--color-rojo); }
-    section.contactoPage .formulario form .btn-enviar {
-      margin-top: 50px;
+  .formulario form .checkbox-box.error label {
+    border: 2px solid var(--color-rojo); }
+  .formulario form .btn-enviar {
+    margin-top: 50px;
+    font-family: var(--fuente-Montserrat);
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--color-rojo);
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .formulario form .btn-enviar img {
+      margin-right: 30px; }
+    .formulario form .btn-enviar button {
+      background-color: transparent;
+      border: none;
+      display: flex;
+      align-items: center;
       font-family: var(--fuente-Montserrat);
       font-weight: 800;
       font-size: 20px;
       color: var(--color-rojo);
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      section.contactoPage .formulario form .btn-enviar img {
-        margin-right: 30px; }
-      section.contactoPage .formulario form .btn-enviar button {
-        background-color: transparent;
-        border: none;
-        display: flex;
-        align-items: center;
-        font-family: var(--fuente-Montserrat);
-        font-weight: 800;
-        font-size: 20px;
-        color: var(--color-rojo);
-        cursor: pointer; }
+      cursor: pointer; }
 
 section.tarjetaContacto {
   padding: 100px 0;
@@ -1689,3 +1726,168 @@ body.page-gracias {
     padding-top: 0;
     margin-bottom: 0;
     height: 100vh; }
+
+section.thanksPage {
+  padding: 80px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden; }
+  section.thanksPage .top {
+    position: absolute;
+    right: 309px;
+    top: 80px; }
+  section.thanksPage .content {
+    width: 100%; }
+  section.thanksPage .marquee-with-optionsTh {
+    height: 66px; }
+    section.thanksPage .marquee-with-optionsTh span {
+      font-family: var(--fuente-Montserrat);
+      font-weight: 500;
+      font-size: 50px;
+      color: var(--color-rojo); }
+  section.thanksPage h1 {
+    font-family: var(--fuente-Montserrat);
+    font-weight: 800;
+    font-size: 35px;
+    text-align: center;
+    color: var(--color-azul);
+    max-width: 936px;
+    margin: 0 auto;
+    margin-top: 15px; }
+
+section.libro {
+  padding-top: 100px; }
+  section.libro h1 {
+    font-family: var(--fuente-Montserrat);
+    font-weight: 800;
+    font-size: 35px;
+    color: var(--color-azul);
+    text-align: center; }
+  section.libro .info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 50px; }
+    section.libro .info .item {
+      display: flex;
+      color: var(--color-azul);
+      align-items: flex-start; }
+      section.libro .info .item img {
+        width: 24.87px;
+        margin-top: 5px;
+        margin-right: 10px; }
+      section.libro .info .item .text span {
+        font-family: var(--fuente-Montserrat);
+        font-weight: 800;
+        font-size: 25px;
+        line-height: 146.9%; }
+      section.libro .info .item .text p {
+        font-family: var(--fuente-Montserrat);
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 146.9%; }
+
+section.formularioLibro {
+  padding-bottom: 100px; }
+  section.formularioLibro .formulario {
+    margin-top: 0; }
+  section.formularioLibro form h3 {
+    font-family: var(--fuente-Montserrat);
+    font-weight: 800;
+    font-size: 35px;
+    color: var(--color-azul);
+    margin-bottom: 40px;
+    margin-top: 100px; }
+  section.formularioLibro form .fecha {
+    width: 405px; }
+  section.formularioLibro form .form-colum {
+    grid-gap: 30px; }
+  section.formularioLibro form .form-colum.der div {
+    width: 65%; }
+  section.formularioLibro form .form-colum.der div:first-child {
+    width: 35%; }
+  section.formularioLibro form .form-colum.izq div {
+    width: 35%; }
+  section.formularioLibro form .form-colum.izq div:first-child {
+    width: 65%; }
+  section.formularioLibro form .form-group.motivo {
+    display: flex; }
+    section.formularioLibro form .form-group.motivo::before {
+      content: none; }
+    section.formularioLibro form .form-group.motivo p {
+      font-family: var(--fuente-Montserrat);
+      font-weight: 600;
+      font-size: 20px;
+      color: var(--color-azul); }
+    section.formularioLibro form .form-group.motivo input {
+      width: 10px;
+      appearance: auto; }
+    section.formularioLibro form .form-group.motivo label {
+      position: relative;
+      height: 20px;
+      border: 2px solid var(--color-azul);
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+      width: 20px;
+      margin-left: 15px;
+      margin-right: 6px; }
+    section.formularioLibro form .form-group.motivo span {
+      display: flex; }
+  section.formularioLibro form p {
+    font-family: var(--fuente-Lato);
+    font-weight: 400;
+    font-size: 20px;
+    color: #000; }
+    section.formularioLibro form p b {
+      font-weight: 700;
+      color: var(--color-azul); }
+  section.formularioLibro form .indicaciones {
+    margin-bottom: 50px; }
+  section.formularioLibro form .checkbox-box label {
+    width: 29px; }
+  section.formularioLibro form .checkbox-box ul {
+    margin-left: 30px; }
+  section.formularioLibro form .checkbox-box .text p {
+    margin: 10px 0;
+    margin-left: 10px; }
+  section.formularioLibro form .checkbox-box .text p:first-child {
+    margin-top: 0;
+    margin-left: 10px; }
+  section.formularioLibro form .checkbox-box .text p:last-child {
+    margin-bottom: 0;
+    margin-left: 10px; }
+  section.formularioLibro form .checkbox-box .text ul li {
+    font-family: var(--fuente-Lato);
+    font-weight: 400;
+    font-size: 20px;
+    list-style: disc; }
+  section.formularioLibro form .motivo p.error {
+    color: var(--color-rojo); }
+  section.formularioLibro form .motivo input {
+    width: 0 !important; }
+  section.formularioLibro form .motivo label {
+    pointer-events: all;
+    position: relative; }
+    section.formularioLibro form .motivo label.activo::before {
+      content: '';
+      position: absolute;
+      width: 3px;
+      height: 8px;
+      background-color: var(--color-rojo);
+      transform: rotate(-30deg);
+      left: 4px;
+      bottom: 1px;
+      border-radius: 10px; }
+    section.formularioLibro form .motivo label.activo::after {
+      content: '';
+      position: absolute;
+      width: 3px;
+      height: 14px;
+      background-color: var(--color-rojo);
+      transform: rotate(30deg);
+      right: 4.5px;
+      top: 1px;
+      border-radius: 10px; }

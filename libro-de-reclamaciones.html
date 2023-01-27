@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Xin Xing - Libro de reclamaciones</title>
+      </head>
+    <body>
+        <header>
+            <div class="container">
+              <nav>
+                <div class="part1">
+                  <ul>
+                    <li class="select"><a href="index.html">Inicio</a></li>
+                    <li class="fex">
+                      <a href="productos.html">Productos</a
+                    </li>
+                  </ul>
+                </div>
+                <div class="logo">
+                  <a href="index.html"><img src="img/logoXinxing.svg" alt="" /></a>
+                </div>
+                <div class="part2">
+                  <ul>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li class="contacto">
+                      <a href="contacto.html" class="hover marquee-with-options"
+                        ><span>Contacto - 接觸 -</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+            <div class="submenu">
+              <div class="container">
+                <div class="part1">
+                  <ul>
+                    <li class="select"><a href="">Aceites</a></li>
+                    <li><a href="">Bebidas</a></li>
+                    <li><a href="">Condimentos y especias</a></li>
+                    <li><a href="">Conservas</a></li>
+                    <li><a href="">Deshidratados</a></li>
+                    <li><a href="">Fideos</a></li>
+                    <li><a href="">Arroz</a></li>
+                    <li><a href="">Galletas y Golosinas</a></li>
+                    <li><a href="">Harinas</a></li>
+                    <li><a href="">Infusiones</a></li>
+                    <li><a href="">Menestras</a></li>
+                    <li><a href="">Salsas</a></li>
+                    <li><a href="">Sillaos</a></li>
+                    <li><a href="">Sopas</a></li>
+                    <li><a href="">Tapers</a></li>
+                    <li><a href="">Utensilios</a></li>
+                    <li><a href="">Licores</a></li>
+                    <li><a href="">Vinagre</a></li>
+                    <li><a href="">Electrodomésticos</a></li>
+                    <li><a href="">Paños y Servilletas</a></li>
+                    <li><a href="">Otros productos</a></li>
+                    <li><a href="">Adornos Orientales</a></li>
+                  </ul>
+                  <div class="buttonEnlace">
+                    <a href="contacto.html"
+                      ><img src="img/flechaButtonEnlace.svg" alt="" />Ver todos los
+                      productos por categorías</a
+                    >
+                  </div>
+                </div>
+                <div class="part2">
+                  <div class="img">
+                    <div class="filtro"></div>
+                    <img src="img/img-submenu.jpg" alt="" class="fondo" />
+                    <img src="img/img-submenu-producto.png" alt="" class="producto" />
+                    <div class="info">
+                      <a href=""
+                        ><img src="img/flechaButtonEnlace.svg" alt="" />Ver productos
+                        WOKI</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </header>
+        <main>
+            <div class="ht-cursor">
+                <div class="ht-cursor-text">
+                  <img src="img/vermas.svg" alt="" />
+                </div>
+              </div>
+
+              <section class="libro">
+                <div class="containerCerrado">
+                    <h1>Libro de reclamaciones</h1>
+                    <div class="info">
+                        <div class="item">
+                            <img src="img/flechaButtonEnlace.svg" alt="">
+                            <div class="text">
+                              <span>Razón social:</span>
+                              <p>Lima Restaurant Depot SAC</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="img/flechaButtonEnlace.svg" alt="">
+                            <div class="text">
+                              <span>RUC:</span>
+                              <p>20563656566</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="img/flechaButtonEnlace.svg" alt="">
+                            <div class="text">
+                              <span>Dirección:</span>
+                              <p>Jr. Paruro 839 Cercado de Lima</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </section>
+
+              <section class="formularioLibro">
+                <div class="containerCerrado">
+                  <div class="formulario">
+                    <form action="gracias-reclamo.html" method="">
+                        <fieldset>
+                            <h3>Fecha de reclamo</h3>
+                            <div class="form-group fecha" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
+                                <span>
+                                    <input class="form-input" validate="0" type="date" required="true" name="fecha" id="fecha" placeholder="xx / xx / xxxx">
+                                </span>
+                                <label for="">xx / xx / xxxx</label>
+                            </div>
+                            <h3>Datos del Consumidor Reclamante</h3>
+                            <div class="form-colum">
+                              <div class="form-group" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
+                                <span>
+                                    <input class="form-input" validate="0" type="text" required="true" name="name" id="name" >
+                                </span>
+                                <label for="name">Nombres:</label>
+                              </div>
+                              <div class="form-group" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
+                                <span>
+                                    <input class="form-input" validate="0" type="text" required="true" name="apellidos" id="apellidos" >
+                                </span>
+                                <label for="apellidos">Apellidos:</label>
+                              </div>
+                            </div>
+                            <div class="form-colum">
+                              <div class="form-group select" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
+                                  <span>
+                                    <select name="documentoId" id="documentoId" required="true" class="form-input">
+                                        <option value="">Doc. de identidad:</option>
+                                        <option value="DNI">DNI</option>
+                                        <option value="Carnet de Extranjería">Carnet de Extranjería</option>
+                                        <option value="Pasaporte">Pasaporte</option>
+                                        <option value="RUC">RUC</option>
+                                    </select>
+                                  </span>                                                                   
+                              </div>  
+                              <div class="form-group" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
+                                <span>
+                                    <input class="form-input" validate="0" type="number" required="true" name="numeroDocumento" id="numeroDocumento" >
+                                </span>
+                                <label for="numeroDocumento">N° de documento:</label>
+                              </div>    
+                            </div>
+                            <div class="form-colum der">
+                              <div
+                                class="form-group"
+                                data-aos="fade-up"
+                                data-aos-once="true"
+                                data-aos-duration="1500"
+                              >
+                                <span>
+                                  <input
+                                    class="form-input"
+                                    validate="0"
+                                    type="number"
+                                    required="true"
+                                    name="tel"
+                                    id="tel"
+                                  />
+                                </span>
+                                <label for="tel">Teléfono fijo/celular:</label>
+                              </div>
+                              <div
+                                class="form-group"
+                                data-aos="fade-up"
+                                data-aos-once="true"
+                                data-aos-duration="1500"
+                              >
+                                <span>
+                                  <input
+                                    class="form-input"
+                                    validate="0"
+                                    type="email"
+                                    required="true"
+                                    name="email"
+                                    id="email"
+                                  />
+                                </span>
+                                <label for="email">Correo electrónico:</label>
+                              </div>
+                            </div>
+                            <div class="form-colum izq">
+                              <div class="form-group" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
+                                <span>
+                                    <input class="form-input" validate="0" type="text" required="true" name="direccionDomicilio" id="direccionDomicilio" >
+                                </span>
+                                <label for="name">Dirección de domicilio:</label>
+                              </div>
+                              <div class="form-group" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
+                                <span>
+                                    <input class="form-input" validate="0" type="text" required="true" name="urbanizacion" id="urbanizacion" >
+                                </span>
+                                <label for="apellidos">Urbanización:</label>
+                              </div>
+                            </div>
+                            <div class="form-colum">
+                              <div class="form-group select" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
+                                <span>
+                                    <select name="departamento" id="departamento" required="true" class="form-input">
+                                        <option value="">Departamento:</option>
+                                        <option value="DNI">DNI</option>
+                                        <option value="Carnet de Extranjería">Carnet de Extranjería</option>
+                                        <option value="Pasaporte">Pasaporte</option>
+                                        <option value="RUC">RUC</option>
+                                    </select>
+                                </span>                                
+                              </div>
+                              <div class="form-group select" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
+                                <span>
+                                    <select name="provincia" id="provincia" required="true" class="form-input">
+                                        <option value="">Provincia:</option>
+                                        <option value="DNI">DNI</option>
+                                        <option value="Carnet de Extranjería">Carnet de Extranjería</option>
+                                        <option value="Pasaporte">Pasaporte</option>
+                                        <option value="RUC">RUC</option>
+                                    </select>
+                                </span>                                
+                              </div>
+                              <div class="form-group select" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
+                                <span>
+                                    <select name="distrito" id="distrito" required="true" class="form-input">
+                                        <option value="">Distrito:</option>
+                                        <option value="DNI">DNI</option>
+                                        <option value="Carnet de Extranjería">Carnet de Extranjería</option>
+                                        <option value="Pasaporte">Pasaporte</option>
+                                        <option value="RUC">RUC</option>
+                                    </select>
+                                </span>                                
+                              </div>      
+                            </div>
+                            <h3>Detalle del Reclamo y Pedido del Consumidor</h3>
+                            <div class="form-group checkbox motivo">    
+                              <p class="texto-check-motivo">Motivo:</p>           
+                              <span>                                                      
+                                  <input type="radio" required="" id="reclamo" value="reclamo" name="motivo">
+                                  <label class="radio1" for="reclamo"></label>
+                                  <p for="reclamo">Reclamo (1)</p>
+                                  <input type="radio" required="" id="queja" value="queja" name="motivo">
+                                  <label class="radio2" for="queja"></label>
+                                  <p for="queja">Queja (2)</p>
+                              </span>               
+                          </div>
+                          <div class="form-colum">
+                            <div class="form-group select" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
+                              <span>
+                                  <select name="relacion" id="relacion" required="true" class="form-input">
+                                      <option value="">Relacionado a:</option>
+                                      <option value="Producto">Producto</option>
+                                      <option value="Servicio">Servicio</option>
+                                  </select>
+                              </span>                                
+                            </div>
+                            <div class="form-group select" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
+                              <span>
+                                  <select name="tipo" id="tipo" required="true" class="form-input">
+                                      <option value="">Tipo:</option>
+                                      <option value="Accidentes">Accidentes</option>
+                                      <option value="Atención">Atención</option>
+                                      <option value="Calidad de producto de alimentación
+                                      ">Calidad de producto de alimentación
+                                      </option>
+                                      <option value="Calidad de producto de no alimentación
+                                      ">Calidad de producto de no alimentación
+                                      </option>
+                                      <option value="Cambio/Devolución de producto
+                                      ">Cambio/Devolución de producto
+                                      </option>
+                                      <option value="Comodidad de tienda
+                                      ">Comodidad de tienda
+                                      </option>
+                                      <option value="Comprobantes de pago e identificación
+                                      ">Comprobantes de pago e identificación
+                                      </option>
+                                      <option value="Consumo no reconocido
+                                      ">Consumo no reconocido
+                                      </option>
+                                      <option value="Cotizaciones">Cotizaciones</option>
+                                      <option value="Daños entre clientes y/o personal de la empresa
+                                      ">Daños entre clientes y/o personal de la empresa
+                                      </option>
+                                      <option value="Estado de Reclamo/Queja/Solicitud
+                                      ">Estado de Reclamo/Queja/Solicitud
+                                      </option>
+                                      <option value="Eventos/Canjes de premios y beneficios
+                                      ">Eventos/Canjes de premios y beneficios
+                                      </option>
+                                      <option value="Incoveniente con transacciones monetarias y no monetarias
+                                      ">Incoveniente con transacciones monetarias y no monetarias
+                                      </option>
+                                      <option value="Limpieza de instalaciones y mercadería.
+                                      ">Limpieza de instalaciones y mercadería.
+                                      </option>
+                                      <option value="Orden de instalaciones y mercadería
+                                      ">Orden de instalaciones y mercadería
+                                      </option>
+                                      <option value="Producto/Objeto olvidado
+                                      ">Producto/Objeto olvidado
+                                      </option>
+                                      <option value="Atención">Atención</option><option value="Promociones">Promociones</option>
+                                      <option value="Protocolos de Salud
+                                      ">Protocolos de Salud
+                                      </option>
+                                      <option value="Recursos Humanos
+                                      ">Recursos Humanos
+                                      </option>
+                                      <option value="Robos">Robos</option>
+                                      <option value="Servicio de Posventa
+                                      ">Servicio de Posventa
+                                      </option>
+                                      <option value="Sostenibilidad y cuidado del medio ambiente
+                                      ">Sostenibilidad y cuidado del medio ambiente
+                                      </option>
+                                      <option value="Surtido">Surtido</option>
+                                      <option value="Uso de Datos Personales/Derecho de Arco
+                                      ">Uso de Datos Personales/Derecho de Arco
+                                      </option>
+                                      <option value="Vales y Gift Cards">Vales y Gift Cards</option>
+                                  </select>
+                              </span>                                
+                            </div>  
+                          </div>
+                          <div class="form-colum">
+                              <div class="form-group" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
+                                <span>
+                                    <input class="form-input" validate="0" type="date" required="true" name="FCompra" id="FCompra" placeholder="xx / xx / xxxx">
+                                </span>
+                                <label for="">F. Compra:</label>
+                            </div>
+                            <div class="form-group" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
+                              <span>
+                                  <input class="form-input" validate="0" type="date" required="true" name="FVencimiento" id="FVencimiento" placeholder="xx / xx / xxxx">
+                              </span>
+                              <label for="">F. Vencimiento:</label>
+                            </div>
+                          </div>
+                          <div class="form-group formmensaje" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
+                            <span>
+                              <textarea required="true" class="form-input" maxlength="" name="descripcionProductoServicio" id="descripcionProductoServicio" cols="30" rows="10"></textarea>
+                            </span>
+                            <label for="descripcionProductoServicio">Descripción del producto o servicio:</label>
+                          </div>
+                          <div class="form-group formmensaje" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
+                            <span>
+                              <textarea required="true" class="form-input" maxlength="" name="detalleReclamoQueja" id="detalleReclamoQueja" cols="30" rows="10"></textarea>
+                            </span>
+                            <label for="detalleReclamoQueja">Detalle de Reclamo o queja del cliente:</label>
+                          </div>
+                          <div class="form-colum">
+                            <div class="form-group" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
+                              <span>
+                                  <input class="form-input" validate="0" type="number" required="true" name="montoReclamoSoles" id="montoReclamoSoles" >
+                              </span>
+                              <label for="montoReclamoSoles">Monto de Reclamo (s/.):</label>
+                            </div> 
+                            <div class="form-group" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
+                              <span>
+                                  <input class="form-input" validate="0" type="text" required="true" name="pedido" id="pedido" >
+                              </span>
+                              <label for="pedido">Pedido:</label>
+                            </div> 
+                          </div>
+                          <div class="indicaciones">
+                            <p><b>(1) Reclamo:</b> Disconformidad relacionada a los productos y/o servicios</p>
+                            <p><b>(2) Queja:</b> Disconformidad no relacionada a los productos y/o servicios; o malestar o descontento a la atención al público.</p>                            
+                          </div>
+                          <div class="checkbox-box" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
+                            <span>
+                              <input type="checkbox" required="" id="politicas">
+                            </span>
+                            <label class="labelPoliticas" for="politicas"></label>
+                            <div class="text">
+                              <p>Declaro ser el titular del servicio y acepto el contenido del presente formulario manifestando bajo Declaración Jurada la
+                                veracidad de los hechos descritos.</p>
+                              <p>Se le informa que sus datos serán tratados conforme a nuestra Política de Privacidad y Uso de Datos Personales", con la
+                                finalidad de dar respuesta a sus comunicaciones dentro del plazo de ley.</p>
+                              <ul>
+                                <li>La formulación del reclamo no impide acudir a otras vías de solución de controversias ni es requisito previo para interponer una denuncia
+                                  ante Indecopi.
+                                 </li>
+                                 <li>El proveedor deberá dar respuesta al reclamo y/o queja en un plazo no mayor a quince (15) días hábiles improrrogables.</li>
+                              </ul>
+
+                            </div>
+                          </div>
+                          <div class="btn-enviar" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
+                            <button type="submit">
+                              <img src="img/flechaButtonEnlace.svg" alt="">Enviar
+                            </button>
+                          </div>
+                        </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </section>
+
+        </main>
+        <footer>
+            <div class="part1">
+              <div class="marquee-with-optionsSiderFooter">
+                <span
+                  >MADE IN CHINA 中国制造 - BUEN SABOR 好味道 - CALIDAD ORIENTAL
+                  东方精品 - SALUDABLE 健康 -</span
+                >
+              </div>
+            </div>
+            <div class="part2">
+              <div class="part2-1">
+                <img src="img/linafooter_izq.svg" alt="" />
+              </div>
+              <div class="part2-2">
+                <img src="img/linafooter_der.svg" alt="" />
+              </div>
+            </div>
+            <div class="part3">
+              <div class="containerCerrado">
+                <div class="part3-1">
+                  <div class="wtp">
+                    <img src="img/icon_whatsapp.png" alt="" />
+                    <div>
+                      <span>Escríbenos</span>
+                      <p>924 304 027</p>
+                    </div>
+                  </div>
+                  <div class="redes">
+                    <span>Síguenos:</span>
+                    <div class="icons">
+                      <a href=""><img src="img/icon-facebook.svg" alt="" /></a>
+                      <a href=""><img src="img/icon-instagram.svg" alt="" /></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="part3-2">
+                  <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                  </ul>
+                </div>
+                <div class="part3-3">
+                  <ul>
+                    <li>
+                      <a href="terminos-y-condiciones.html">Términos y condiciones</a>
+                    </li>
+                    <li>
+                      <a href="cambios-y-devolucion.html">Cambios y devolución</a>
+                    </li>
+                    <li>
+                      <a href="politicas-de-privacidad.html"
+                        >Políticas de privacidad</a
+                      >
+                    </li>
+                    <li>
+                      <a href="politicas-de-cookies.html">Políticas de cookies</a>
+                    </li>
+                    <li>
+                      <a href="libro-de-reclamaciones.html">Libro de reclamaciones</a>
+                    </li>
+                    <li>
+                      <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="part3-4">
+                  <span>Tienda</span>
+                  <ul>
+                    <li>Jr.Paruro 839, Lima Cercado</li>
+                    <li>(511) 427 4977</li>
+                    <li>(511) 428 5052</li>
+                  </ul>
+                  <span>Oficina Central</span>
+                  <ul>
+                    <li>(511) 328 2196</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="pie">
+              <div class="containerCerrado">
+                <p><b>XINXING</b> - 2022 Todos lo derechos reservados</p>
+                <p>
+                  Made with <img class="corazon" src="img/corazon.svg" alt="" /><img
+                    src="img/icon-nerd.svg"
+                    alt=""
+                  />
+                </p>
+              </div>
+            </div>
+        </footer>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="js/jquery.pause.js" type="text/javascript"></script>
+    <script src="js/jquery.easing.min.js" type="text/javascript"></script>
+    <script src="js/jquery.marquee.js?v=3" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</html>

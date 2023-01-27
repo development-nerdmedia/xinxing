@@ -29,6 +29,14 @@ $('.marquee-with-optionsSiderFooter').marquee({
   duplicated: true,
 });
 
+$('.marquee-with-optionsTh').marquee({
+  duration: 30000,
+  gap: 0,
+  delayBeforeStart: 0,
+  direction: 'left',
+  duplicated: true,
+});
+
 
 $(document).ready(function () {
   $("header .fex").hover(function () {
@@ -64,6 +72,24 @@ $(".swiperCategoriasHome .swiper-slide").hover(function () {
 document.addEventListener("click", (e) => {
   if (e.target.closest(".checkbox-box input")) {
     document.querySelector(".labelPoliticas").classList.toggle("activo");
+  }
+  if (e.target.closest(".checkbox.motivo .radio1")) {
+    document.querySelector(".radio1").classList.add("activo");
+    document.querySelector(".radio2").classList.remove("activo");
+  }
+  if (e.target.closest(".checkbox.motivo .radio2")) {
+    document.querySelector(".radio1").classList.remove("activo");
+    document.querySelector(".radio2").classList.add("activo");
+  }
+  var formespacioselect = document.querySelectorAll('.formulario form select');
+  if (e.target.closest(".formulario form select")) {
+    e.target.parentElement.classList.toggle("active");
+    console.log("aprietas el select");
+  }
+  else {
+    formespacioselect.forEach(function (shinyItem2) {
+      shinyItem2.parentElement.classList.remove("active")
+    });
   }
 })
 
@@ -188,63 +214,80 @@ MyApp = {
       })
     }
   },
-  validate:{
+  validate: {
     init: function () {
       var formespacio = document.querySelectorAll('.form-group');
       var formespacioinput = document.querySelectorAll('.form-input');
       var formespacioselect = document.querySelectorAll('form select');
+      var formespacioselect = document.querySelectorAll('.formulario select.form-input');
 
       $(document).on("wheel", "input[type=number]", function (e) { $(this).blur(); });
 
       function inputcheck() {
         for (let i = 0; i < formespacioinput.length; i++) {
-            if (!formespacioinput[i].value) {
-                formespacioinput[i].parentElement.parentElement.classList.remove("ok");
-            } else {
-                formespacioinput[i].parentElement.parentElement.classList.add("ok");
-            }
+          if (!formespacioinput[i].value) {
+            formespacioinput[i].parentElement.parentElement.classList.remove("ok");
+          } else {
+            formespacioinput[i].parentElement.parentElement.classList.add("ok");
+          }
         }
       }
 
       function validateInput(e) {
         for (let y = 0; y < formespacioinput.length; y++) {
-            if (!formespacioinput[y].value) {
-                formespacioinput[y].parentElement.parentElement.classList.add("error");
-                e.preventDefault();
-            } else {
-                formespacioinput[y].parentElement.parentElement.classList.remove("error");
-            }
+          if (!formespacioinput[y].value) {
+            formespacioinput[y].parentElement.parentElement.classList.add("error");
+            e.preventDefault();
+          } else {
+            formespacioinput[y].parentElement.parentElement.classList.remove("error");
+          }
         }
       }
 
       function validateSelect(e) {
+
         for (let i = 0; i < formespacioselect.length; i++) {
-            if (formespacioselect[i].value == "Tipo de evento:") {
-                formespacioselect[i].classList.add("error");
-                e.preventDefault();
+          if (formespacioselect[i].classList.contains("default")) {
+          } else {
+            if (formespacioselect[i].value == "") {
+              formespacioselect[i].classList.add("falta");
+              e.preventDefault();
             } else {
-                formespacioselect[i].classList.remove("error");
+              formespacioselect[i].classList.remove("falta");
             }
+          }
+
         }
+      }
+
+      function validatecheckbox(e) {
+        if (!document.querySelector('input[name="motivo"]:checked')) {
+          document.querySelector(".texto-check-motivo").classList.add("error");
+          // e.preventDefault();
+        } else {
+          document.querySelector(".texto-check-motivo").classList.remove("error");
+        }
+        // if (!document.querySelector('input[name="ubicacion"]:checked')) {
+        //     document.querySelector(".texto-check-ubi").classList.add("error");
+        //     // e.preventDefault();
+        // } else {
+        //     document.querySelector(".texto-check-ubi").classList.remove("error");
+        // }
       }
 
       $('.form-input').on('change', () => {
         formespacioinput.forEach(element => {
-            if (!element.value == "") {
-                element.parentElement.parentElement.classList.add("ok");
-            } else {
-                element.parentElement.parentElement.classList.remove("ok");
-            }
+          if (!element.value == "") {
+            element.parentElement.parentElement.classList.add("ok");
+          } else {
+            element.parentElement.parentElement.classList.remove("ok");
+          }
         });
       });
 
-      function validateCheck(e){
+      function validateCheck(e) {
         formespaciocheck = document.querySelectorAll(".formulario input[type='checkbox']");
         for (let i = 0; i < formespaciocheck.length; i++) {
-          //if (formespaciocheck[i].classList.contains("activo")) {            
-            //e.preventDefault();
-            //console.log("a");
-          //}
           if (formespaciocheck[i].checked) {
             formespaciocheck[i].parentElement.parentElement.classList.remove("error");
           } else {
@@ -255,25 +298,25 @@ MyApp = {
 
       document.addEventListener("click", function (e) {
         if (e.target.closest(".form-input")) {
-            formespacio.forEach(function (shinyItem) {
-                shinyItem.classList.remove("focusin");
-            })
-            e.target.parentElement.parentElement.classList.add("focusin");
+          formespacio.forEach(function (shinyItem) {
+            shinyItem.classList.remove("focusin");
+          })
+          e.target.parentElement.parentElement.classList.add("focusin");
         } else {
-            formespacio.forEach(function (shinyItem) {
-                shinyItem.classList.remove("focusin");
-            });
+          formespacio.forEach(function (shinyItem) {
+            shinyItem.classList.remove("focusin");
+          });
         }
 
         if (e.target.closest("form select")) {
-            formespacioselect.forEach(function (shinyItem2) {
-                shinyItem2.parentElement.parentElement.parentElement.classList.remove("open");
-            })
-            e.target.parentElement.parentElement.parentElement.classList.add("open");
+          formespacioselect.forEach(function (shinyItem2) {
+            shinyItem2.parentElement.parentElement.classList.remove("open");
+          })
+          e.target.parentElement.parentElement.classList.add("open");
         } else {
-            formespacioselect.forEach(function (shinyItem2) {
-                shinyItem2.parentElement.parentElement.parentElement.classList.remove("open");
-            });
+          formespacioselect.forEach(function (shinyItem2) {
+            shinyItem2.parentElement.parentElement.classList.remove("open");
+          });
         }
 
 
@@ -281,28 +324,30 @@ MyApp = {
 
         if (e.target.closest("form button")) {
 
-            validateInput(e)
+          validateInput(e)
 
-            validateSelect(e)
+          validateSelect(e)
 
-            validateCheck(e)
+          validatecheckbox(e)
+
+          validateCheck(e)
 
         }
       })
 
       document.addEventListener("keydown", function (event) {
         if (event.keyCode == 9) {
-            for (let i = 0; i < formespacioinput.length; i++) {
-                formespacioinput[i].addEventListener('focusin', (event) => {
-                    formespacioinput[i].parentElement.parentElement.classList.add('focusin');
-                });
-                formespacioinput[i].addEventListener('focusout', (event) => {
-                    formespacioinput[i].parentElement.parentElement.classList.remove('focusin');
-                    if (formespacioinput[i].value) {
-                        formespacioinput[i].parentElement.parentElement.classList.add('ok');
-                    }
-                });
-            }
+          for (let i = 0; i < formespacioinput.length; i++) {
+            formespacioinput[i].addEventListener('focusin', (event) => {
+              formespacioinput[i].parentElement.parentElement.classList.add('focusin');
+            });
+            formespacioinput[i].addEventListener('focusout', (event) => {
+              formespacioinput[i].parentElement.parentElement.classList.remove('focusin');
+              if (formespacioinput[i].value) {
+                formespacioinput[i].parentElement.parentElement.classList.add('ok');
+              }
+            });
+          }
         }
       })
 
@@ -330,7 +375,7 @@ if ($('.categorias').length > 0) {
   MyApp.contentCategorias.init();
 }
 
-if ($('.contactoPage .formulario').length > 0) {
+if ($('.formulario').length > 0) {
   MyApp.validate.init();
 }
 
