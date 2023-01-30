@@ -15,7 +15,7 @@ $('.marquee-with-optionsSider').marquee({
 });
 
 $('.marquee-with-options2').marquee({
-  duration: 25000,
+  duration: 40000,
   gap: 0,
   delayBeforeStart: 0,
   direction: 'left',
@@ -41,18 +41,24 @@ $('.marquee-with-optionsTh').marquee({
 $(document).ready(function () {
   $("header .fex").hover(function () {
     document.querySelector("header").classList.add("open")
+    document.querySelector(".filtroMain").classList.add("open")
   }), function () {
     document.querySelector("header").classList.remove("open")
+    document.querySelector(".filtroMain").classList.remove("open")
   };
   $("main").hover(function () {
     document.querySelector("header").classList.remove("open")
+    document.querySelector(".filtroMain").classList.remove("open")
   }), function () {
     document.querySelector("header").classList.remove("open")
+    document.querySelector(".filtroMain").classList.remove("open")
   };
   $("footer").hover(function () {
     document.querySelector("header").classList.remove("open")
+    document.querySelector(".filtroMain").classList.remove("open")
   }), function () {
     document.querySelector("header").classList.remove("open")
+    document.querySelector(".filtroMain").classList.remove("open")
   };
 });
 
@@ -119,13 +125,15 @@ MyApp = {
       const descripcionSlider = document.querySelector("section.sliderHome .container .part1 .info p")
 
       swiper.on('slideChange', function () {
-        var TituloDiapo = document.querySelector(".swiperHome .swiper-slide-next .info .titulo").textContent
-        var tituloChinoDiapo = document.querySelector(".swiperHome .swiper-slide-next .info .tituloChino").textContent
-        var descripcionDiapo = document.querySelector(".swiperHome .swiper-slide-next .info .descripcion").textContent
+        setTimeout(() => {
+          var TituloDiapo = document.querySelector(".swiperHome .swiper-slide-active .info .titulo").textContent
+          var tituloChinoDiapo = document.querySelector(".swiperHome .swiper-slide-active .info .tituloChino").textContent
+          var descripcionDiapo = document.querySelector(".swiperHome .swiper-slide-active .info .descripcion").textContent
 
-        tituloSlider.innerHTML = TituloDiapo
-        tituloChinoSlider.innerHTML = tituloChinoDiapo
-        descripcionSlider.innerHTML = descripcionDiapo
+          tituloSlider.innerHTML = TituloDiapo
+          tituloChinoSlider.innerHTML = tituloChinoDiapo
+          descripcionSlider.innerHTML = descripcionDiapo
+        }, 200);
       });
     }
   },
