@@ -746,7 +746,8 @@ footer {
           align-items: center;
           margin-bottom: 30px; }
           footer .part3 .containerCerrado .part3-1 .wtp img {
-            margin-right: 8px; }
+            margin-right: 8px;
+            width: 80px; }
           footer .part3 .containerCerrado .part3-1 .wtp span {
             font-size: 25px; }
           footer .part3 .containerCerrado .part3-1 .wtp p {
@@ -802,7 +803,8 @@ footer {
       justify-content: space-between;
       align-items: center; }
       footer .pie .containerCerrado p {
-        font-size: 16px; }
+        font-size: 16px;
+        font-family: var(--fuente-Lato); }
       footer .pie .containerCerrado .corazon {
         height: 16px;
         margin-right: 5px; }
@@ -1160,7 +1162,7 @@ section.nosotrosPage {
       font-weight: 400;
       font-size: 20px;
       color: #000;
-      margin: 30px 0; }
+      margin: 20px 0; }
     section.nosotrosPage .content .part2 p:first-child {
       margin-top: 0; }
     section.nosotrosPage .content .part2 p:last-child {
@@ -1189,7 +1191,7 @@ section.misionVision {
         font-weight: 400;
         font-size: 20px;
         color: #000;
-        margin-top: 15px; }
+        margin-top: 20px; }
     section.misionVision .containerCerrado .part1 {
       border-right: 1px solid var(--color-azul);
       padding-right: 100px;
@@ -1550,7 +1552,7 @@ section.contactoPage {
     height: 15px;
     transform: translateY(-50%);
     pointer-events: none; }
-  .formulario form .form-group.select.open span::after {
+  .formulario form .form-group.select span.active::after {
     transform: translateY(-50%) rotate(180deg); }
   .formulario form .form-group.formmensaje label {
     top: 12px; }
@@ -1847,23 +1849,34 @@ section.formularioLibro {
   section.formularioLibro form .indicaciones {
     margin-bottom: 50px; }
   section.formularioLibro form .checkbox-box label {
-    width: 29px; }
+    width: 26px;
+    height: 21px;
+    margin-top: 3px; }
   section.formularioLibro form .checkbox-box ul {
     margin-left: 30px; }
-  section.formularioLibro form .checkbox-box .text p {
-    margin: 10px 0;
-    margin-left: 10px; }
-  section.formularioLibro form .checkbox-box .text p:first-child {
-    margin-top: 0;
-    margin-left: 10px; }
-  section.formularioLibro form .checkbox-box .text p:last-child {
-    margin-bottom: 0;
-    margin-left: 10px; }
-  section.formularioLibro form .checkbox-box .text ul li {
-    font-family: var(--fuente-Lato);
+  section.formularioLibro form .checkbox-box p {
+    margin: 0;
+    margin-left: 10px;
+    color: #000;
     font-weight: 400;
-    font-size: 20px;
-    list-style: disc; }
+    font-family: var(--fuente-Lato); }
+  section.formularioLibro form .text p {
+    margin: 10px 0;
+    margin-left: 35px !important;
+    color: #000;
+    font-weight: 400;
+    font-family: var(--fuente-Lato); }
+    section.formularioLibro form .text p a {
+      font-weight: 700;
+      color: var(--color-azul);
+      text-decoration: underline; }
+  section.formularioLibro form .text ul {
+    margin-left: 55px; }
+    section.formularioLibro form .text ul li {
+      font-family: var(--fuente-Lato);
+      font-weight: 400;
+      font-size: 20px;
+      list-style: disc; }
   section.formularioLibro form .motivo p.error {
     color: var(--color-rojo); }
   section.formularioLibro form .motivo input {
@@ -1891,3 +1904,107 @@ section.formularioLibro {
       right: 4.5px;
       top: 1px;
       border-radius: 10px; }
+
+body.page-libro-de-reclamaciones main {
+  margin-bottom: 0;
+  border-radius: 0; }
+
+section.piePage {
+  padding: 10px 0;
+  background-color: var(--color-azul); }
+  section.piePage .containerCerrado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  section.piePage .containerCerrado p {
+    font-size: 16px;
+    color: #fff;
+    font-family: var(--fuente-Lato);
+    font-size: 16px;
+    font-weight: 400; }
+  section.piePage .containerCerrado .corazon {
+    height: 16px;
+    margin-right: 5px; }
+
+section.acordeon {
+  padding: 100px 0;
+  overflow: hidden; }
+  section.acordeon h2 {
+    font-family: var(--fuente-Montserrat);
+    font-weight: 800;
+    font-size: 35px;
+    color: var(--color-azul);
+    pointer-events: none;
+    cursor: initial; }
+  section.acordeon .faq-collapsible {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    position: relative; }
+    section.acordeon .faq-collapsible img {
+      transform: rotate(270deg);
+      pointer-events: none; }
+    section.acordeon .faq-collapsible::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 200%;
+      background-color: var(--color-azul);
+      height: 1px;
+      transform: translateX(-50%); }
+  section.acordeon .faq-container {
+    cursor: pointer;
+    position: relative; }
+    section.acordeon .faq-container::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 50%;
+      width: 200%;
+      background-color: var(--color-azul);
+      height: 1px;
+      transform: translateX(-50%); }
+  section.acordeon .faq-container:first-child::before {
+    content: none; }
+  section.acordeon .faq-container:last-child {
+    padding-bottom: 0px; }
+  section.acordeon .faq-answer {
+    overflow: hidden;
+    cursor: default;
+    max-height: 0; }
+    section.acordeon .faq-answer p, section.acordeon .faq-answer li {
+      font-family: var(--fuente-Lato);
+      font-weight: 400;
+      font-size: 20px;
+      color: #000;
+      margin: 20px 0;
+      cursor: initial; }
+    section.acordeon .faq-answer p:first-child {
+      margin-top: 0; }
+    section.acordeon .faq-answer a {
+      text-decoration: underline;
+      color: #000; }
+    section.acordeon .faq-answer ul {
+      margin-left: 20px; }
+      section.acordeon .faq-answer ul li {
+        list-style: disc; }
+    section.acordeon .faq-answer h3 {
+      margin-top: 50px;
+      font-family: var(--fuente-Montserrat);
+      font-weight: 800;
+      font-size: 25px;
+      color: var(--color-azul);
+      cursor: initial; }
+  section.acordeon .faq-answer :first-child {
+    margin-top: 0; }
+  section.acordeon .faq-container.open {
+    padding-bottom: 50px; }
+    section.acordeon .faq-container.open .faq-collapsible img {
+      transform: rotate(90deg); }
+    section.acordeon .faq-container.open .faq-answer {
+      padding-top: 40px;
+      max-height: 100%;
+      transform: translateY(0); }

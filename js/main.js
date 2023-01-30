@@ -91,6 +91,13 @@ document.addEventListener("click", (e) => {
       shinyItem2.parentElement.classList.remove("active")
     });
   }
+
+  if (e.target.closest("a")) {
+    if (e.target.getAttribute("category-tab")) {
+      var categoriaTab = e.target.getAttribute("category-tab");
+      localStorage.setItem('category_tab', categoriaTab);
+    }
+  }
 })
 
 MyApp = {
@@ -261,18 +268,21 @@ MyApp = {
       }
 
       function validatecheckbox(e) {
-        if (!document.querySelector('input[name="motivo"]:checked')) {
-          document.querySelector(".texto-check-motivo").classList.add("error");
-          // e.preventDefault();
-        } else {
-          document.querySelector(".texto-check-motivo").classList.remove("error");
+        if (document.querySelector('input[name="motivo"]:checked')) {
+          if (!document.querySelector('input[name="motivo"]:checked')) {
+            document.querySelector(".texto-check-motivo").classList.add("error");
+            // e.preventDefault();
+          } else {
+            document.querySelector(".texto-check-motivo").classList.remove("error");
+          }
+          // if (!document.querySelector('input[name="ubicacion"]:checked')) {
+          //     document.querySelector(".texto-check-ubi").classList.add("error");
+          //     // e.preventDefault();
+          // } else {
+          //     document.querySelector(".texto-check-ubi").classList.remove("error");
+          // }
         }
-        // if (!document.querySelector('input[name="ubicacion"]:checked')) {
-        //     document.querySelector(".texto-check-ubi").classList.add("error");
-        //     // e.preventDefault();
-        // } else {
-        //     document.querySelector(".texto-check-ubi").classList.remove("error");
-        // }
+        
       }
 
       $('.form-input').on('change', () => {
@@ -305,17 +315,6 @@ MyApp = {
         } else {
           formespacio.forEach(function (shinyItem) {
             shinyItem.classList.remove("focusin");
-          });
-        }
-
-        if (e.target.closest("form select")) {
-          formespacioselect.forEach(function (shinyItem2) {
-            shinyItem2.parentElement.parentElement.classList.remove("open");
-          })
-          e.target.parentElement.parentElement.classList.add("open");
-        } else {
-          formespacioselect.forEach(function (shinyItem2) {
-            shinyItem2.parentElement.parentElement.classList.remove("open");
           });
         }
 
@@ -352,7 +351,35 @@ MyApp = {
       })
 
     }
-  }
+  },
+  tabs: {
+    init: function () {
+        let collapsible = document.querySelectorAll(".faq-collapsible");
+        var category_tab_select = localStorage.getItem('category_tab');
+
+          for (let i = 0; i < collapsible.length; i++) {
+            if (collapsible[i].parentElement.getAttribute("category-tab") == category_tab_select) {
+              collapsible[i].parentElement.classList.add("open");
+            }else{
+              collapsible[i].parentElement.classList.remove("open");
+            }
+          }
+        
+        
+        collapsible.forEach((element) => {
+            element.addEventListener("click", (element) => {
+                if (!element.target.parentElement.classList.contains('open')) {
+                    for (let i = 0; i < collapsible.length; i++) {
+                        collapsible[i].parentElement.classList.remove("open");
+                    }
+                    element.target.parentElement.classList.add("open");
+                } else {
+                    element.target.parentElement.classList.remove("open");
+                }
+            });
+        });
+    }
+},
 }
 
 if ($('.swiperHome').length > 0) {
@@ -379,6 +406,9 @@ if ($('.formulario').length > 0) {
   MyApp.validate.init();
 }
 
+if ($('.acordeon').length > 0) {
+  MyApp.tabs.init();
+}
 
 // if ($(".articulo .part2 .img").length > 0) {
 //   $(".articulo .part2 .img").stick_in_parent({
