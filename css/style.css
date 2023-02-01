@@ -78,7 +78,7 @@ a {
     display: flex;
     align-items: center;
     font-family: var(--fuente-Montserrat);
-    font-weight: 800;
+    font-weight: 700;
     font-size: 20px;
     color: var(--color-rojo); }
     .buttonEnlace a .circulo {
@@ -156,7 +156,7 @@ header {
           header .submenu .container .part1 ul li.select {
             background-color: var(--color-rojo); }
             header .submenu .container .part1 ul li.select a {
-              font-weight: 800; }
+              font-weight: 700; }
           header .submenu .container .part1 ul li:hover {
             background-color: var(--color-rojo); }
         header .submenu .container .part1 .buttonEnlace {
@@ -197,7 +197,7 @@ header {
             width: 13px; }
           header .submenu .container .part2 .info a {
             font-family: var(--fuente-Montserrat);
-            font-weight: 800;
+            font-weight: 700;
             font-size: 20px;
             color: #fff;
             display: flex;
@@ -285,7 +285,7 @@ nav {
       display: block;
       overflow: hidden;
       white-space: nowrap;
-      font-weight: 800;
+      font-weight: 700;
       position: relative; }
       nav .part1 ul li.contacto a span,
       nav .part2 ul li.contacto a span {
@@ -371,7 +371,7 @@ section.sliderHome {
         max-width: 352px; }
       section.sliderHome .container .part1 .info h1 {
         font-family: var(--fuente-Montserrat);
-        font-weight: 800;
+        font-weight: 700;
         font-size: 50px;
         color: var(--color-azul); }
       section.sliderHome .container .part1 .info p {
@@ -386,7 +386,7 @@ section.sliderHome {
         background-color: var(--color-rojo);
         color: #fff;
         font-family: var(--fuente-Montserrat);
-        font-weight: 800;
+        font-weight: 700;
         font-size: 20px;
         display: block;
         border-radius: 10px;
@@ -430,7 +430,7 @@ section.sliderHome {
           transform-origin: top left; }
           section.sliderHome .container .part2 .textoVertical .marquee-with-optionsSider span {
             font-family: var(--fuente-Montserrat);
-            font-weight: 800;
+            font-weight: 700;
             font-size: 30px;
             color: var(--color-rojo); }
       section.sliderHome .container .part2 .swiper-horizontal > .swiper-pagination-bullets, section.sliderHome .container .part2 .swiper-pagination-bullets.swiper-pagination-horizontal, section.sliderHome .container .part2 .swiper-pagination-custom, section.sliderHome .container .part2 .swiper-pagination-fraction {
@@ -457,14 +457,14 @@ section.productosHome {
     justify-content: center; }
   section.productosHome h3 {
     font-family: var(--fuente-Montserrat);
-    font-weight: 800;
+    font-weight: 700;
     font-size: 25px;
     color: var(--color-rojo);
     text-align: center; }
   section.productosHome h2 {
     margin-top: 10px;
     font-family: var(--fuente-Montserrat);
-    font-weight: 800;
+    font-weight: 700;
     font-size: 35px;
     color: var(--color-azul);
     max-width: 722px;
@@ -520,12 +520,12 @@ section.productosHome {
         width: auto; }
       section.productosHome .swiperCategoriasHome .swiper-slide p {
         font-family: var(--fuente-Montserrat);
-        font-weight: 800;
+        font-weight: 700;
         font-size: 25px;
         color: var(--color-rojo); }
       section.productosHome .swiperCategoriasHome .swiper-slide h4 {
         font-family: var(--fuente-Montserrat);
-        font-weight: 800;
+        font-weight: 700;
         font-size: 25px;
         color: var(--color-azul); }
       section.productosHome .swiperCategoriasHome .swiper-slide:hover .filtro {
@@ -573,7 +573,7 @@ section.bannerAzul {
     color: #fff;
     text-align: center; }
     section.bannerAzul h2 b {
-      font-weight: 800; }
+      font-weight: 700; }
   section.bannerAzul a {
     color: #fff; }
 
@@ -601,11 +601,12 @@ section.woki {
       text-align: center;
       max-width: 624px; }
       section.woki .container p b {
-        font-weight: 800; }
+        font-weight: 700; }
     section.woki .container a img {
       margin-bottom: 0; }
     section.woki .container img.imgFloat {
-      position: absolute; }
+      position: absolute;
+      animation: flotante 3s infinite; }
     section.woki .container img.if1 {
       top: -232px;
       left: -300px; }
@@ -619,12 +620,20 @@ section.woki {
       bottom: -301px;
       right: -268px; }
 
+@keyframes flotante {
+  0% {
+    transform: translateY(0px); }
+  50% {
+    transform: translateY(-15px); }
+  0% {
+    transform: translateY(0px); } }
+
 section.bannerSomos {
   padding-bottom: 100px;
   background-color: var(--color-azul); }
   section.bannerSomos h2 {
     font-family: var(--fuente-Montserrat);
-    font-weight: 800;
+    font-weight: 700;
     font-size: 35px;
     color: #fff;
     background-color: var(--color-rojo);
@@ -661,7 +670,7 @@ section.bannerSomos {
     color: #fff; }
     section.bannerSomos .gridSomos h3 {
       font-family: var(--fuente-Montserrat);
-      font-weight: 800;
+      font-weight: 700;
       font-size: 25px; }
     section.bannerSomos .gridSomos p {
       font-family: var(--fuente-Lato);
@@ -697,12 +706,12 @@ section.clientes {
     width: 60%; }
     section.clientes .part2 span {
       font-family: var(--fuente-Montserrat);
-      font-weight: 800;
+      font-weight: 700;
       font-size: 25px;
       color: var(--color-rojo); }
     section.clientes .part2 h2 {
       font-family: var(--fuente-Montserrat);
-      font-weight: 800;
+      font-weight: 700;
       font-size: 35px;
       color: var(--color-azul); }
     section.clientes .part2 .buttonEnlace {
@@ -732,7 +741,7 @@ section.organizacion {
       z-index: 1; }
       section.organizacion .containerCerrado .part1 h2 {
         font-family: var(--fuente-Montserrat);
-        font-weight: 800;
+        font-weight: 700;
         font-size: 35px; }
       section.organizacion .containerCerrado .part1 p {
         margin-top: 15px;
@@ -740,7 +749,7 @@ section.organizacion {
         font-weight: 400;
         font-size: 20px; }
         section.organizacion .containerCerrado .part1 p b {
-          font-weight: 800; }
+          font-weight: 700; }
       section.organizacion .containerCerrado .part1::after {
         content: '';
         position: absolute;
@@ -778,13 +787,13 @@ section.blogHome {
       max-width: 722px; }
       section.blogHome .containerCerrado .title span {
         font-family: var(--fuente-Montserrat);
-        font-weight: 800;
+        font-weight: 700;
         font-size: 25px;
         color: var(--color-rojo); }
       section.blogHome .containerCerrado .title h2 {
         color: var(--color-azul);
         font-family: var(--fuente-Montserrat);
-        font-weight: 800;
+        font-weight: 700;
         font-size: 35px; }
     section.blogHome .containerCerrado .flechas {
       position: relative; }
@@ -850,7 +859,7 @@ section.blogHome {
       font-size: 20px; }
     .itemArticulo .info h3 {
       font-family: var(--fuente-Montserrat);
-      font-weight: 800;
+      font-weight: 700;
       font-size: 25px;
       margin: 15px 0; }
     .itemArticulo .info .circulo {
@@ -932,11 +941,11 @@ footer {
       justify-content: space-between; }
       footer .part3 .containerCerrado .part3-1 {
         font-family: var(--fuente-Montserrat);
-        font-weight: 800; }
+        font-weight: 700;
+        margin: auto 0; }
         footer .part3 .containerCerrado .part3-1 .wtp {
           display: flex;
-          align-items: center;
-          margin-bottom: 30px; }
+          align-items: center; }
           footer .part3 .containerCerrado .part3-1 .wtp img {
             margin-right: 8px;
             width: 80px; }
@@ -964,28 +973,65 @@ footer {
           font-weight: 700; }
       footer .part3 .containerCerrado .part3-2 li {
         font-size: 20px;
-        font-family: var(--fuente-Lato); }
+        font-family: var(--fuente-Lato);
+        position: relative;
+        width: fit-content; }
+        footer .part3 .containerCerrado .part3-2 li::before {
+          content: '';
+          position: absolute;
+          bottom: -1px;
+          left: 0;
+          background-color: #fff;
+          width: 0;
+          height: 1px;
+          transition: 0.3s linear; }
+        footer .part3 .containerCerrado .part3-2 li:hover::before {
+          width: 100%; }
       footer .part3 .containerCerrado .part3-3 {
         max-width: 212px; }
         footer .part3 .containerCerrado .part3-3 ul {
-          margin-bottom: 20px; }
+          margin-bottom: 30px; }
           footer .part3 .containerCerrado .part3-3 ul li {
             font-size: 20px;
-            font-family: var(--fuente-Lato); }
-        footer .part3 .containerCerrado .part3-3 img {
-          margin-right: 15px; }
+            font-family: var(--fuente-Lato);
+            position: relative;
+            width: fit-content; }
+            footer .part3 .containerCerrado .part3-3 ul li::before {
+              content: '';
+              position: absolute;
+              bottom: -1px;
+              left: 0;
+              background-color: #fff;
+              width: 0;
+              height: 1px;
+              transition: 0.3s linear; }
+            footer .part3 .containerCerrado .part3-3 ul li:hover::before {
+              width: 100%; }
         footer .part3 .containerCerrado .part3-3 a.libro {
           display: flex;
           font-family: var(--fuente-Lato);
-          font-weight: 800;
+          font-weight: 700;
           font-size: 20px;
           color: #fff; }
+        footer .part3 .containerCerrado .part3-3 .redes {
+          display: flex;
+          align-items: center; }
+          footer .part3 .containerCerrado .part3-3 .redes span {
+            font-size: 20px;
+            font-weight: 700;
+            margin-right: 15px;
+            font-family: var(--fuente-Lato); }
+          footer .part3 .containerCerrado .part3-3 .redes .icons {
+            display: flex;
+            grid-gap: 20px; }
+            footer .part3 .containerCerrado .part3-3 .redes .icons a {
+              display: flex; }
       footer .part3 .containerCerrado .part3-4 {
         font-family: var(--fuente-Lato); }
         footer .part3 .containerCerrado .part3-4 span:first-child {
           margin-top: 0; }
         footer .part3 .containerCerrado .part3-4 span {
-          font-weight: 800;
+          font-weight: 700;
           font-size: 20px;
           margin-top: 20px;
           display: block; }
@@ -1021,7 +1067,7 @@ section.categoriaProducto {
         padding: 50px;
         font-family: var(--fuente-Montserrat);
         color: var(--color-azul);
-        font-weight: 800;
+        font-weight: 700;
         border: 2px solid var(--color-azul);
         box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
         border-radius: 10px; }
@@ -1055,7 +1101,7 @@ section.categoriaProducto {
           font-size: 35px; }
         section.categoriaProducto .containerCerrado .part1 .content h1 {
           font-size: 45px;
-          font-weight: 800; }
+          font-weight: 700; }
         section.categoriaProducto .containerCerrado .part1 .content .descarga {
           width: fit-content; }
           section.categoriaProducto .containerCerrado .part1 .content .descarga img {
@@ -1080,7 +1126,8 @@ section.categoriaProducto {
           section.categoriaProducto .containerCerrado .part1 .content .tipos span, section.categoriaProducto .containerCerrado .part1 .content .marcas span {
             font-size: 20px; }
           section.categoriaProducto .containerCerrado .part1 .content .tipos img, section.categoriaProducto .containerCerrado .part1 .content .marcas img {
-            max-height: 60px; }
+            max-height: 60px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); }
           section.categoriaProducto .containerCerrado .part1 .content .tipos .logos, section.categoriaProducto .containerCerrado .part1 .content .marcas .logos {
             display: flex;
             grid-gap: 40px;
@@ -1134,7 +1181,7 @@ section.presentaciones {
   overflow: hidden; }
   section.presentaciones h2 {
     font-family: var(--fuente-Montserrat);
-    font-weight: 800;
+    font-weight: 700;
     font-size: 35px;
     text-align: center;
     max-width: 539px;
@@ -1164,7 +1211,7 @@ section.presentaciones {
       align-items: center; }
       section.presentaciones .gridProductos div h3 {
         font-family: var(--fuente-Montserrat);
-        font-weight: 800;
+        font-weight: 700;
         font-size: 25px;
         color: var(--color-azul); }
   section.presentaciones .listaProductos .item {
@@ -1191,7 +1238,7 @@ section.presentaciones {
         color: var(--color-rojo);
         font-family: var(--fuente-Montserrat);
         font-size: 20px;
-        font-weight: 800;
+        font-weight: 700;
         margin-top: 5px;
         text-decoration: underline; }
       section.presentaciones .listaProductos .item div span {
@@ -1215,22 +1262,26 @@ section.siguienteProducto {
       font-family: var(--fuente-Montserrat);
       max-width: 270px; }
       section.siguienteProducto .containerCerrado .part1 span {
-        font-weight: 800;
+        font-weight: 700;
         font-size: 25px;
         color: var(--color-rojo); }
       section.siguienteProducto .containerCerrado .part1 h2 {
-        font-weight: 800;
+        font-weight: 700;
         font-size: 35px;
         color: var(--color-azul); }
     section.siguienteProducto .containerCerrado .part3 a {
       display: flex;
       align-items: center;
       font-family: var(--fuente-Montserrat);
-      font-weight: 800;
+      font-weight: 700;
       font-size: 20px;
       color: var(--color-rojo); }
       section.siguienteProducto .containerCerrado .part3 a img {
         margin-right: 30px; }
+    section.siguienteProducto .containerCerrado .buttonEnlace {
+      margin-top: 0; }
+      section.siguienteProducto .containerCerrado .buttonEnlace .circulo img {
+        margin-right: 0; }
 
 section.itemProducto {
   padding: 100px 0;
@@ -1259,7 +1310,7 @@ section.itemProducto {
         padding: 50px;
         font-family: var(--fuente-Montserrat);
         color: var(--color-azul);
-        font-weight: 800;
+        font-weight: 700;
         border: 2px solid var(--color-azul);
         box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
         border-radius: 10px; }
@@ -1281,7 +1332,7 @@ section.itemProducto {
           font-size: 35px; }
         section.itemProducto .containerCerrado .part2 .content h1 {
           font-size: 45px;
-          font-weight: 800; }
+          font-weight: 700; }
         section.itemProducto .containerCerrado .part2 .content .marcas {
           margin: 30px 0;
           padding: 27px 30px;
@@ -1296,7 +1347,7 @@ section.itemProducto {
             font-size: 20px;
             margin: 9px 0; }
             section.itemProducto .containerCerrado .part2 .content .marcas .datos p b {
-              font-weight: 800; }
+              font-weight: 700; }
           section.itemProducto .containerCerrado .part2 .content .marcas .datos p:first-child {
             margin-top: 0; }
           section.itemProducto .containerCerrado .part2 .content .marcas .datos p:last-child {
@@ -1368,11 +1419,11 @@ section.productosDestacados {
       font-family: var(--fuente-Montserrat);
       position: absolute; }
       section.productosDestacados .containerCerrado .part1 span {
-        font-weight: 800;
+        font-weight: 700;
         font-size: 25px;
         color: var(--color-rojo); }
       section.productosDestacados .containerCerrado .part1 h2 {
-        font-weight: 800;
+        font-weight: 700;
         font-size: 35px;
         color: var(--color-azul); }
     section.productosDestacados .containerCerrado .part2 {
@@ -1400,12 +1451,12 @@ section.productosDestacados {
         align-items: center; }
       section.productosDestacados .swiperProductosDestacados .item span {
         font-family: var(--fuente-Montserrat);
-        font-weight: 800;
+        font-weight: 700;
         font-size: 20px;
         color: var(--color-rojo); }
       section.productosDestacados .swiperProductosDestacados .item h3 {
         font-family: var(--fuente-Montserrat);
-        font-weight: 800;
+        font-weight: 700;
         font-size: 25px;
         color: var(--color-azul); }
     section.productosDestacados .swiperProductosDestacados .item.swiper-slide-active {
@@ -1422,14 +1473,14 @@ section.nosotrosPage {
       margin-bottom: 80px; }
   section.nosotrosPage h3 {
     font-family: var(--fuente-Montserrat);
-    font-weight: 800;
+    font-weight: 700;
     font-size: 25px;
     color: var(--color-rojo);
     text-align: center; }
   section.nosotrosPage h2 {
     margin-top: 10px;
     font-family: var(--fuente-Montserrat);
-    font-weight: 800;
+    font-weight: 700;
     font-size: 35px;
     color: var(--color-azul);
     max-width: 722px;
@@ -1463,11 +1514,11 @@ section.misionVision {
       font-family: var(--fuente-Montserrat);
       position: relative; }
       section.misionVision .containerCerrado div span {
-        font-weight: 800;
+        font-weight: 700;
         font-size: 35px;
         color: var(--color-rojo); }
       section.misionVision .containerCerrado div h2 {
-        font-weight: 800;
+        font-weight: 700;
         font-size: 35px;
         color: var(--color-azul); }
       section.misionVision .containerCerrado div p {
@@ -1528,11 +1579,11 @@ section.valores {
       padding: 100px 50px 100px 16.1vw;
       font-family: var(--fuente-Montserrat); }
       section.valores .content .part1 span {
-        font-weight: 800;
+        font-weight: 700;
         font-size: 35px;
         color: var(--color-rojo); }
       section.valores .content .part1 h2 {
-        font-weight: 800;
+        font-weight: 700;
         font-size: 35px;
         color: #fff; }
       section.valores .content .part1 ul {
@@ -1591,7 +1642,7 @@ section.organizacionNosotros {
       margin-bottom: 50px; }
     section.organizacionNosotros .containerCerrado h2 {
       font-family: var(--fuente-Montserrat);
-      font-weight: 800;
+      font-weight: 700;
       font-size: 35px;
       color: var(--color-azul); }
     section.organizacionNosotros .containerCerrado p {
@@ -1601,7 +1652,7 @@ section.organizacionNosotros {
       font-size: 20px;
       color: #000; }
       section.organizacionNosotros .containerCerrado p b {
-        font-weight: 800; }
+        font-weight: 700; }
     section.organizacionNosotros .containerCerrado .part1 {
       position: relative; }
       section.organizacionNosotros .containerCerrado .part1::before {
@@ -1637,14 +1688,14 @@ section.blog {
     margin-bottom: 50px; }
     section.blog .title h3 {
       font-family: var(--fuente-Montserrat);
-      font-weight: 800;
+      font-weight: 700;
       font-size: 25px;
       color: var(--color-rojo);
       text-align: center; }
     section.blog .title h2 {
       margin-top: 10px;
       font-family: var(--fuente-Montserrat);
-      font-weight: 800;
+      font-weight: 700;
       font-size: 35px;
       color: var(--color-azul);
       max-width: 722px;
@@ -1694,15 +1745,34 @@ section.articulo {
         align-items: center;
         font-family: var(--fuente-Montserrat);
         font-size: 20px;
-        font-weight: 800;
+        font-weight: 700;
         color: var(--color-rojo);
         display: flex;
         align-items: center; }
         section.articulo .content .part1 a img {
           margin-right: 10px; }
+      section.articulo .content .part1 .buttonEnlace {
+        margin-top: 0;
+        display: block;
+        position: relative;
+        width: fit-content; }
+        section.articulo .content .part1 .buttonEnlace a {
+          text-decoration: none !important; }
+        section.articulo .content .part1 .buttonEnlace .circulo {
+          width: 33px;
+          height: 33px;
+          border: 3.5px solid #C91A2C;
+          margin-right: 10px;
+          transition: 0.2s linear; }
+          section.articulo .content .part1 .buttonEnlace .circulo img {
+            margin-right: 0;
+            width: 13px;
+            transform: rotate(180deg); }
+        section.articulo .content .part1 .buttonEnlace:hover .circulo {
+          transform: translateX(-3px); }
       section.articulo .content .part1 h1 {
         font-family: var(--fuente-Montserrat);
-        font-weight: 800;
+        font-weight: 700;
         font-size: 35px;
         margin: 30px 0 20px 0;
         color: var(--color-azul); }
@@ -1729,7 +1799,7 @@ section.articulo {
         section.articulo .content .part1 .redes span {
           font-family: var(--fuente-Montserrat);
           font-style: normal;
-          font-weight: 800;
+          font-weight: 700;
           font-size: 25px;
           color: var(--color-rojo); }
         section.articulo .content .part1 .redes .redesIcon {
@@ -1761,13 +1831,13 @@ section.contactoPage {
       margin-top: 10px;
       max-width: 1143px;
       font-family: var(--fuente-Montserrat);
-      font-weight: 800;
+      font-weight: 700;
       font-size: 35px;
       text-align: center;
       color: var(--color-azul); }
     section.contactoPage .title h2 {
       font-family: var(--fuente-Montserrat);
-      font-weight: 800;
+      font-weight: 700;
       font-size: 25px;
       color: var(--color-rojo); }
 
@@ -1908,7 +1978,7 @@ section.contactoPage {
   .formulario form .btn-enviar {
     margin-top: 50px;
     font-family: var(--fuente-Montserrat);
-    font-weight: 800;
+    font-weight: 700;
     font-size: 20px;
     color: var(--color-rojo);
     display: flex;
@@ -1922,7 +1992,7 @@ section.contactoPage {
       display: flex;
       align-items: center;
       font-family: var(--fuente-Montserrat);
-      font-weight: 800;
+      font-weight: 700;
       font-size: 20px;
       color: var(--color-rojo);
       cursor: pointer; }
@@ -1932,7 +2002,7 @@ section.tarjetaContacto {
   background-color: var(--color-azul); }
   section.tarjetaContacto h2 {
     font-family: var(--fuente-Montserrat);
-    font-weight: 800;
+    font-weight: 700;
     font-size: 35px;
     color: #fff;
     text-align: center; }
@@ -1950,7 +2020,7 @@ section.tarjetaContacto {
         margin-right: 10px; }
       section.tarjetaContacto .datos .item .text span {
         font-family: var(--fuente-Montserrat);
-        font-weight: 800;
+        font-weight: 700;
         font-size: 25px;
         line-height: 146.9%; }
       section.tarjetaContacto .datos .item .text p {
@@ -1982,14 +2052,14 @@ section.datosTienda {
           border-radius: 0px; }
         section.datosTienda .content .part1 .logo p {
           font-family: var(--fuente-Montserrat);
-          font-weight: 800;
+          font-weight: 700;
           font-size: 35px;
           color: var(--color-azul); }
       section.datosTienda .content .part1 .info {
         color: var(--color-azul); }
         section.datosTienda .content .part1 .info span {
           font-family: var(--fuente-Montserrat);
-          font-weight: 800;
+          font-weight: 700;
           font-size: 25px;
           padding-top: 30px;
           display: inline-block; }
@@ -2041,7 +2111,7 @@ section.thanksPage {
       color: var(--color-rojo); }
   section.thanksPage h1 {
     font-family: var(--fuente-Montserrat);
-    font-weight: 800;
+    font-weight: 700;
     font-size: 35px;
     text-align: center;
     color: var(--color-azul);
@@ -2053,7 +2123,7 @@ section.libro {
   padding-top: 100px; }
   section.libro h1 {
     font-family: var(--fuente-Montserrat);
-    font-weight: 800;
+    font-weight: 700;
     font-size: 35px;
     color: var(--color-azul);
     text-align: center; }
@@ -2071,7 +2141,7 @@ section.libro {
         margin-right: 10px; }
       section.libro .info .item .text span {
         font-family: var(--fuente-Montserrat);
-        font-weight: 800;
+        font-weight: 700;
         font-size: 25px;
         line-height: 146.9%; }
       section.libro .info .item .text p {
@@ -2086,7 +2156,7 @@ section.formularioLibro {
     margin-top: 0; }
   section.formularioLibro form h3 {
     font-family: var(--fuente-Montserrat);
-    font-weight: 800;
+    font-weight: 700;
     font-size: 35px;
     color: var(--color-azul);
     margin-bottom: 40px;
@@ -2219,10 +2289,11 @@ section.piePage {
 
 section.acordeon {
   padding: 100px 0;
+  padding-top: 50px;
   overflow: hidden; }
   section.acordeon h2 {
     font-family: var(--fuente-Montserrat);
-    font-weight: 800;
+    font-weight: 700;
     font-size: 35px;
     color: var(--color-azul);
     pointer-events: none;
@@ -2281,11 +2352,21 @@ section.acordeon {
     section.acordeon .faq-answer ul {
       margin-left: 20px; }
       section.acordeon .faq-answer ul li {
-        list-style: disc; }
+        position: relative; }
+        section.acordeon .faq-answer ul li::before {
+          content: '';
+          position: absolute;
+          background-image: url(../img/bullet-azul.svg);
+          background-repeat: no-repeat;
+          background-size: 100%;
+          top: 9px;
+          left: -20px;
+          width: 8px;
+          height: 8px; }
     section.acordeon .faq-answer h3 {
       margin-top: 50px;
       font-family: var(--fuente-Montserrat);
-      font-weight: 800;
+      font-weight: 700;
       font-size: 25px;
       color: var(--color-azul);
       cursor: initial; }
@@ -2299,3 +2380,5 @@ section.acordeon {
       padding-top: 40px;
       max-height: 100%;
       transform: translateY(0); }
+  section.acordeon .faq-content .faq-container.open:last-child {
+    padding-bottom: 0px; }

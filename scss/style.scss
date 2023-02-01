@@ -94,7 +94,7 @@ a{
         display: flex;
         align-items: center;
         font-family: var(--fuente-Montserrat);
-        font-weight: 800;
+        font-weight: 700;
         font-size: 20px;
         color: var(--color-rojo);
         .circulo{
@@ -192,7 +192,7 @@ header{
                     li.select{
                         background-color: var(--color-rojo);
                         a{
-                            font-weight: 800;
+                            font-weight: 700;
                         }
                     }
                     li:hover{
@@ -250,7 +250,7 @@ header{
                     }
                     a{
                         font-family: var(--fuente-Montserrat);
-                        font-weight: 800;
+                        font-weight: 700;
                         font-size: 20px;
                         color: #fff;
                         display: flex;
@@ -358,7 +358,7 @@ nav{
                     display: block;
                     overflow: hidden;
                     white-space: nowrap;    
-                    font-weight: 800;
+                    font-weight: 700;
                     position: relative;
                     span{
                         margin: 0 3px;
@@ -455,7 +455,7 @@ section.sliderHome{
             .info{
                 h1{
                     font-family: var(--fuente-Montserrat);
-                    font-weight: 800;
+                    font-weight: 700;
                     font-size: 50px;
                     color: var(--color-azul);
                 }
@@ -472,7 +472,7 @@ section.sliderHome{
                     background-color: var(--color-rojo);
                     color: #fff;
                     font-family: var(--fuente-Montserrat);
-                    font-weight: 800;
+                    font-weight: 700;
                     font-size: 20px;
                     display: block;
                     border-radius: 10px;
@@ -529,7 +529,7 @@ section.sliderHome{
                     transform-origin: top left;
                     span{
                         font-family: var(--fuente-Montserrat);
-                        font-weight: 800;
+                        font-weight: 700;
                         font-size: 30px;
                         color: var(--color-rojo);
                     }
@@ -566,7 +566,7 @@ section.productosHome{
     }
     h3{
         font-family: var(--fuente-Montserrat);
-        font-weight: 800;
+        font-weight: 700;
         font-size: 25px;
         color: var(--color-rojo);   
         text-align: center;
@@ -574,7 +574,7 @@ section.productosHome{
     h2{
         margin-top: 10px;
         font-family: var(--fuente-Montserrat);
-        font-weight: 800;
+        font-weight: 700;
         font-size: 35px;
         color: var(--color-azul);
         max-width: 722px;
@@ -638,13 +638,13 @@ section.productosHome{
             }
             p{
                 font-family: var(--fuente-Montserrat);
-                font-weight: 800;
+                font-weight: 700;
                 font-size: 25px;
                 color: var(--color-rojo);
             }
             h4{
                 font-family: var(--fuente-Montserrat);
-                font-weight: 800;
+                font-weight: 700;
                 font-size: 25px;
                 color: var(--color-azul);
             }
@@ -708,7 +708,7 @@ section.bannerAzul{
         color: #fff;
         text-align: center;
         b{
-            font-weight: 800;
+            font-weight: 700;
         }
     }
     a{
@@ -742,7 +742,7 @@ section.woki{
             text-align: center;
             max-width: 624px;
             b{
-                font-weight: 800;
+                font-weight: 700;
             }
         }
         a{
@@ -752,6 +752,7 @@ section.woki{
         }
         img.imgFloat{
             position: absolute;
+            animation: flotante 3s infinite ;
         }
         img.if1{
             top: -232px;
@@ -772,12 +773,24 @@ section.woki{
     }
 }
 
+@keyframes flotante {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    0%{
+        transform: translateY(0px);
+    }
+}
+
 section.bannerSomos{
     padding-bottom: 100px;
     background-color: var(--color-azul);
     h2{
         font-family: var(--fuente-Montserrat);
-        font-weight: 800;
+        font-weight: 700;
         font-size: 35px;
         color: #fff;
         background-color: var(--color-rojo);
@@ -817,7 +830,7 @@ section.bannerSomos{
         color: #fff;
         h3{
             font-family: var(--fuente-Montserrat);
-            font-weight: 800;
+            font-weight: 700;
             font-size: 25px;
         }
         p{
@@ -862,13 +875,13 @@ section.clientes{
         width: 60%;
         span{
             font-family: var(--fuente-Montserrat);
-            font-weight: 800;
+            font-weight: 700;
             font-size: 25px;
             color: var(--color-rojo);
         }
         h2{
             font-family: var(--fuente-Montserrat);
-            font-weight: 800;
+            font-weight: 700;
             font-size: 35px;
             color: var(--color-azul);
         }
@@ -907,7 +920,7 @@ section.organizacion{
             z-index: 1;
             h2{
                 font-family: var(--fuente-Montserrat);
-                font-weight: 800;
+                font-weight: 700;
                 font-size: 35px;
             }
             p{
@@ -916,7 +929,7 @@ section.organizacion{
                 font-weight: 400;
                 font-size: 20px;
                 b{
-                    font-weight: 800;
+                    font-weight: 700;
                 }
             }
             &::after{
@@ -963,14 +976,14 @@ section.blogHome{
             max-width: 722px;
             span{
                 font-family: var(--fuente-Montserrat);
-                font-weight: 800;
+                font-weight: 700;
                 font-size: 25px;
                 color: var(--color-rojo);
             }
             h2{
                 color: var(--color-azul);
                 font-family: var(--fuente-Montserrat);
-                font-weight: 800;
+                font-weight: 700;
                 font-size: 35px;
             }
         }
@@ -1052,7 +1065,7 @@ section.blogHome{
         }
         h3{
             font-family: var(--fuente-Montserrat);
-            font-weight: 800;
+            font-weight: 700;
             font-size: 25px;
             margin: 15px 0;
         }
@@ -1157,11 +1170,12 @@ footer{
             justify-content: space-between;
             .part3-1{
                 font-family: var(--fuente-Montserrat);
-                font-weight: 800;
+                font-weight: 700;
+                margin: auto 0;
                 .wtp{
                     display: flex;
                     align-items: center;
-                    margin-bottom: 30px;
+                    //margin-bottom: 30px;
                     img{
                         margin-right: 8px;
                         width: 80px;
@@ -1203,26 +1217,74 @@ footer{
                 li{
                     font-size: 20px;
                     font-family: var(--fuente-Lato);
+                    position: relative;
+                    width: fit-content;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        bottom: -1px;
+                        left: 0;
+                        background-color: #fff;
+                        width: 0;
+                        height: 1px;
+                        transition: 0.3s linear;
+                    }
+                    &:hover{
+                        &::before{
+                            width: 100%;
+                        }
+                    }
                 }
             }
             .part3-3{
                 max-width: 212px;
                 ul{
-                    margin-bottom: 20px;
+                    margin-bottom: 30px;
                     li{
                         font-size: 20px;
                         font-family: var(--fuente-Lato);
+                        position: relative;
+                    width: fit-content;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        bottom: -1px;
+                        left: 0;
+                        background-color: #fff;
+                        width: 0;
+                        height: 1px;
+                        transition: 0.3s linear;
                     }
-                }
-                img{
-                    margin-right: 15px;
+                    &:hover{
+                        &::before{
+                            width: 100%;
+                        }
+                    }
+                    }
                 }
                 a.libro{
                     display: flex;
                     font-family: var(--fuente-Lato);
-                    font-weight: 800;
+                    font-weight: 700;
                     font-size: 20px;
                     color: #fff;
+                }
+                .redes{
+                    display: flex;
+                    align-items: center;
+                    span{
+                        font-size: 20px;
+                        font-weight: 700;
+                        margin-right: 15px;
+                        font-family: var(--fuente-Lato);
+                    }
+                    .icons{
+                        display: flex;
+                        grid-gap: 20px;
+                        a {
+                            display: flex;
+                        }
+                    }
                 }
             }
             .part3-4{
@@ -1231,7 +1293,7 @@ footer{
                     margin-top: 0;
                 }
                 span{
-                    font-weight: 800;
+                    font-weight: 700;
                     font-size: 20px;
                     margin-top: 20px;
                     display: block;
@@ -1240,6 +1302,7 @@ footer{
                     font-weight: 600;
                     font-size: 20px;
                 }
+
             }
         }
     }
@@ -1278,7 +1341,7 @@ section.categoriaProducto{
                 padding: 50px;
                 font-family: var(--fuente-Montserrat);
                 color: var(--color-azul);
-                font-weight: 800;
+                font-weight: 700;
                 border: 2px solid var(--color-azul);
                 box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
                 border-radius: 10px;
@@ -1323,7 +1386,7 @@ section.categoriaProducto{
                 }
                 h1{
                     font-size: 45px;
-                    font-weight: 800;
+                    font-weight: 700;
                 }
                 .descarga{
                     width: fit-content;
@@ -1361,6 +1424,7 @@ section.categoriaProducto{
                     }
                     img{
                         max-height: 60px;
+                        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
                     }
                     .logos{
                         // display: grid;
@@ -1440,7 +1504,7 @@ section.presentaciones{
     overflow: hidden;
     h2{
         font-family: var(--fuente-Montserrat);
-        font-weight: 800;
+        font-weight: 700;
         font-size: 35px;
         text-align: center;
         max-width: 539px;
@@ -1475,7 +1539,7 @@ section.presentaciones{
             align-items: center;
             h3{
                 font-family: var(--fuente-Montserrat);
-                font-weight: 800;
+                font-weight: 700;
                 font-size: 25px;
                 color: var(--color-azul);
             }
@@ -1507,7 +1571,7 @@ section.presentaciones{
                     color: var(--color-rojo);
                     font-family: var(--fuente-Montserrat);
                     font-size: 20px;
-                    font-weight: 800;
+                    font-weight: 700;
                     margin-top: 5px;
                     text-decoration: underline;
                 }
@@ -1538,12 +1602,12 @@ section.siguienteProducto{
             font-family: var(--fuente-Montserrat);
             max-width: 270px;
             span{
-                font-weight: 800;
+                font-weight: 700;
                 font-size: 25px;
                 color: var(--color-rojo);
             }
             h2{
-                font-weight: 800;
+                font-weight: 700;
                 font-size: 35px;
                 color: var(--color-azul);
             }
@@ -1553,12 +1617,18 @@ section.siguienteProducto{
                 display: flex;
                 align-items: center;
                 font-family: var(--fuente-Montserrat);
-                font-weight: 800;
+                font-weight: 700;
                 font-size: 20px;
                 color: var(--color-rojo);
                 img{
                     margin-right: 30px;
                 }
+            }
+        }
+        .buttonEnlace{
+            margin-top: 0;
+            .circulo img{
+                margin-right: 0;
             }
         }
     }
@@ -1595,7 +1665,7 @@ section.itemProducto{
                 padding: 50px;
                 font-family: var(--fuente-Montserrat);
                 color: var(--color-azul);
-                font-weight: 800;
+                font-weight: 700;
                 border: 2px solid var(--color-azul);
                 box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
                 border-radius: 10px;
@@ -1626,7 +1696,7 @@ section.itemProducto{
                 }
                 h1 {
                     font-size: 45px;
-                    font-weight: 800;
+                    font-weight: 700;
                 }
                 .marcas{
                     margin: 30px 0;
@@ -1643,7 +1713,7 @@ section.itemProducto{
                             font-size: 20px;
                             margin: 9px 0;
                             b{
-                                font-weight: 800;
+                                font-weight: 700;
                             }
                         }
                         p:first-child{
@@ -1738,12 +1808,12 @@ section.productosDestacados{
             font-family: var(--fuente-Montserrat);
             position: absolute;
             span{
-                font-weight: 800;
+                font-weight: 700;
                 font-size: 25px;
                 color: var(--color-rojo);
             }
             h2{
-                font-weight: 800;
+                font-weight: 700;
                 font-size: 35px;
                 color: var(--color-azul);
             }
@@ -1778,13 +1848,13 @@ section.productosDestacados{
             }
             span{
                 font-family: var(--fuente-Montserrat);
-                font-weight: 800;
+                font-weight: 700;
                 font-size: 20px;
                 color: var(--color-rojo);
             }
             h3{
                 font-family: var(--fuente-Montserrat);
-                font-weight: 800;
+                font-weight: 700;
                 font-size: 25px;
                 color: var(--color-azul);
             }
@@ -1809,7 +1879,7 @@ section.nosotrosPage{
     }
     h3{
         font-family: var(--fuente-Montserrat);
-        font-weight: 800;
+        font-weight: 700;
         font-size: 25px;
         color: var(--color-rojo);
         text-align: center;
@@ -1817,7 +1887,7 @@ section.nosotrosPage{
     h2{
         margin-top: 10px;
         font-family: var(--fuente-Montserrat);
-        font-weight: 800;
+        font-weight: 700;
         font-size: 35px;
         color: var(--color-azul);
         max-width: 722px;
@@ -1862,12 +1932,12 @@ section.misionVision{
             font-family: var(--fuente-Montserrat);
             position: relative;
             span{
-                font-weight: 800;
+                font-weight: 700;
                 font-size: 35px;
                 color: var(--color-rojo);
             }
             h2{
-                font-weight: 800;
+                font-weight: 700;
                 font-size: 35px;
                 color: var(--color-azul);
             }
@@ -1939,12 +2009,12 @@ section.valores{
             padding: 100px 50px 100px 16.1vw;
             font-family: var(--fuente-Montserrat);
             span{
-                font-weight: 800;
+                font-weight: 700;
                 font-size: 35px;
                 color: var(--color-rojo);
             }
             h2{
-                font-weight: 800;
+                font-weight: 700;
                 font-size: 35px;
                 color: #fff;
             }
@@ -2017,7 +2087,7 @@ section.organizacionNosotros{
         }
         h2{
             font-family: var(--fuente-Montserrat);
-            font-weight: 800;
+            font-weight: 700;
             font-size: 35px;
             color: var(--color-azul);
         }
@@ -2027,7 +2097,7 @@ section.organizacionNosotros{
             font-weight: 400;
             font-size: 20px;
             color: #000;
-            b{font-weight: 800;}
+            b{font-weight: 700;}
         }
         .part1{
             position: relative;
@@ -2070,7 +2140,7 @@ section.blog{
         margin-bottom: 50px;
         h3 {
             font-family: var(--fuente-Montserrat);
-            font-weight: 800;
+            font-weight: 700;
             font-size: 25px;
             color: var(--color-rojo);
             text-align: center;
@@ -2078,7 +2148,7 @@ section.blog{
         h2 {
             margin-top: 10px;
             font-family: var(--fuente-Montserrat);
-            font-weight: 800;
+            font-weight: 700;
             font-size: 35px;
             color: var(--color-azul);
             max-width: 722px;
@@ -2141,7 +2211,7 @@ section.articulo{
                 align-items: center;
                 font-family: var(--fuente-Montserrat);
                 font-size: 20px;
-                font-weight: 800;
+                font-weight: 700;
                 color: var(--color-rojo);
                 display: flex;
                 align-items: center;
@@ -2149,9 +2219,33 @@ section.articulo{
                     margin-right: 10px;
                 }
             }
+            .buttonEnlace {
+                margin-top: 0;
+                display: block;
+                position: relative;
+                width: fit-content;
+                a {
+                    text-decoration: none !important;
+                }
+                .circulo {
+                    width: 33px;
+                    height: 33px;
+                    border: 3.5px solid #C91A2C;
+                    margin-right: 10px;
+                    transition: 0.2s linear;
+                    img {
+                        margin-right: 0;
+                        width: 13px;
+                        transform: rotate(180deg);
+                    }
+                }
+                &:hover .circulo {
+                    transform: translateX(-3px);
+                }
+            }
             h1{
                 font-family: var(--fuente-Montserrat);
-                font-weight: 800;
+                font-weight: 700;
                 font-size: 35px;
                 margin: 30px 0 20px 0;
                 color: var(--color-azul);
@@ -2184,7 +2278,7 @@ section.articulo{
                 span{
                     font-family: var(--fuente-Montserrat);
                     font-style: normal;
-                    font-weight: 800;
+                    font-weight: 700;
                     font-size: 25px;
                     color: var(--color-rojo);
                 }
@@ -2225,14 +2319,14 @@ section.contactoPage{
             margin-top: 10px;
             max-width: 1143px;
             font-family: var(--fuente-Montserrat);
-            font-weight: 800;
+            font-weight: 700;
             font-size: 35px;
             text-align: center;
             color: var(--color-azul);
         }
         h2{
             font-family: var(--fuente-Montserrat);
-            font-weight: 800;
+            font-weight: 700;
             font-size: 25px;
             color: var(--color-rojo);
         }
@@ -2418,7 +2512,7 @@ section.contactoPage{
         .btn-enviar{
             margin-top: 50px;
             font-family: var(--fuente-Montserrat);
-            font-weight: 800;
+            font-weight: 700;
             font-size: 20px;
             color: var(--color-rojo);
             display: flex;
@@ -2433,7 +2527,7 @@ section.contactoPage{
                 display: flex;
                 align-items: center;
                 font-family: var(--fuente-Montserrat);
-                font-weight: 800;
+                font-weight: 700;
                 font-size: 20px;
                 color: var(--color-rojo);
                 cursor: pointer;
@@ -2448,7 +2542,7 @@ section.tarjetaContacto{
     background-color: var(--color-azul);
     h2{
         font-family: var(--fuente-Montserrat);
-        font-weight: 800;
+        font-weight: 700;
         font-size: 35px;
         color: #fff;
         text-align: center;
@@ -2471,7 +2565,7 @@ section.tarjetaContacto{
             .text{
                 span{
                     font-family: var(--fuente-Montserrat);
-                    font-weight: 800;
+                    font-weight: 700;
                     font-size: 25px;
                     line-height: 146.9%;
                 }
@@ -2511,7 +2605,7 @@ section.datosTienda{
                 }
                 p{
                     font-family: var(--fuente-Montserrat);
-                    font-weight: 800;
+                    font-weight: 700;
                     font-size: 35px;
                     color: var(--color-azul);
                 }
@@ -2520,7 +2614,7 @@ section.datosTienda{
                 color: var(--color-azul);
                 span{
                     font-family: var(--fuente-Montserrat);
-                    font-weight: 800;
+                    font-weight: 700;
                     font-size: 25px;
                     padding-top: 30px;
                     display: inline-block;
@@ -2588,7 +2682,7 @@ section.thanksPage{
     }
     h1{
         font-family: var(--fuente-Montserrat);
-        font-weight: 800;
+        font-weight: 700;
         font-size: 35px;
         text-align: center;
         color: var(--color-azul);
@@ -2603,7 +2697,7 @@ section.libro{
     padding-top: 100px;
     h1{
         font-family: var(--fuente-Montserrat);
-        font-weight: 800;
+        font-weight: 700;
         font-size: 35px;
         color: var(--color-azul);
         text-align: center;
@@ -2624,7 +2718,7 @@ section.libro{
             .text{
                 span {
                     font-family: var(--fuente-Montserrat);
-                    font-weight: 800;
+                    font-weight: 700;
                     font-size: 25px;
                     line-height: 146.9%;
                 }
@@ -2647,7 +2741,7 @@ section.formularioLibro{
     form{
         h3{
             font-family: var(--fuente-Montserrat);
-            font-weight: 800;
+            font-weight: 700;
             font-size: 35px;
             color: var(--color-azul);
             margin-bottom: 40px;
@@ -2832,10 +2926,11 @@ section.piePage{
 
 section.acordeon{
     padding: 100px 0;
+    padding-top: 50px;
     overflow: hidden;
     h2{
         font-family: var(--fuente-Montserrat);
-        font-weight: 800;
+        font-weight: 700;
         font-size: 35px;
         color: var(--color-azul);
         pointer-events: none;
@@ -2912,13 +3007,24 @@ section.acordeon{
         ul{
             margin-left: 20px;
             li{
-                list-style: disc;
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    background-image: url(../img/bullet-azul.svg);
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    top: 9px;
+                    left: -20px;
+                    width: 8px;
+                    height: 8px;
+                }
             }
         }
         h3{
             margin-top: 50px;
             font-family: var(--fuente-Montserrat);
-            font-weight: 800;
+            font-weight: 700;
             font-size: 25px;
             color: var(--color-azul);
             cursor: initial;
@@ -2938,4 +3044,9 @@ section.acordeon{
             transform: translateY(0);
         }
     }
+    .faq-content .faq-container.open:last-child {
+        //background-color: #C91A2C;
+        padding-bottom: 0px;
+    }
+
 }

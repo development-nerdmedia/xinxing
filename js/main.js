@@ -106,6 +106,64 @@ document.addEventListener("click", (e) => {
   }
 })
 
+$('.follow').mouseleave(function (e) {
+  TweenMax.to('.follow', 0.3, { scale: 1, x: 0, y: 0 });
+
+});
+
+$('.follow').mouseenter(function (e) {
+});
+
+$('.follow').mousemove(function (e) {
+  callParallax(e);
+});
+
+function callParallax(e) {
+  parallaxIt(e, '.follow', 80);
+}
+
+function parallaxIt(e, target, movement) {
+  var $this = $('.follow');
+  var relX = e.pageX - $this.offset().left;
+  var relY = e.pageY - $this.offset().top;
+
+  TweenMax.to(target, 0.3, {
+    x: (relX - $this.width() / 2) / $this.width() * movement,
+    y: (relY - $this.height() / 2) / $this.height() * movement,
+    ease: Power2.easeOut
+  });
+}
+
+/******************************************************************************** */
+
+$('.followProducto').mouseleave(function (e) {
+  TweenMax.to('.followProducto', 0.3, { scale: 1, x: 0, y: 0 });
+
+});
+
+$('.followProducto').mouseenter(function (e) {
+});
+
+$('.followProducto').mousemove(function (e) {
+  callParallax2(e);
+});
+
+function callParallax2(e) {
+  parallaxIt2(e, '.followProducto', 80);
+}
+
+function parallaxIt2(e, target, movement) {
+  var $this = $('.followProducto');
+  var relX = e.pageX - $this.offset().left;
+  var relY = e.pageY - $this.offset().top;
+
+  TweenMax.to(target, 0.3, {
+    x: (relX - $this.width() / 2) / $this.width() * movement,
+    y: (relY - $this.height() / 2) / $this.height() * movement,
+    ease: Power2.easeOut
+  });
+}
+
 MyApp = {
   swiperHome: {
     init: function () {
@@ -144,8 +202,8 @@ MyApp = {
         spaceBetween: 30,
         freeMode: true,
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".blogHome .swiper-button-next",
+          prevEl: ".blogHome .swiper-button-prev",
         },
       });
     }
@@ -159,8 +217,8 @@ MyApp = {
         loop: true,
         loopFillGroupWithBlank: true,
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".slideInHome .swiper-button-next",
+          prevEl: ".slideInHome .swiper-button-prev",
         },
       });
     }
@@ -173,10 +231,10 @@ MyApp = {
         slidesPerGroup: 1,
         loop: true,
         loopFillGroupWithBlank: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
+        // navigation: {
+        //   nextEl: ".swiper-button-next",
+        //   prevEl: ".swiper-button-prev",
+        // },
       });
     }
   },
@@ -290,7 +348,7 @@ MyApp = {
           //     document.querySelector(".texto-check-ubi").classList.remove("error");
           // }
         }
-        
+
       }
 
       $('.form-input').on('change', () => {
@@ -362,32 +420,32 @@ MyApp = {
   },
   tabs: {
     init: function () {
-        let collapsible = document.querySelectorAll(".faq-collapsible");
-        var category_tab_select = localStorage.getItem('category_tab');
+      let collapsible = document.querySelectorAll(".faq-collapsible");
+      var category_tab_select = localStorage.getItem('category_tab');
 
-          for (let i = 0; i < collapsible.length; i++) {
-            if (collapsible[i].parentElement.getAttribute("category-tab") == category_tab_select) {
-              collapsible[i].parentElement.classList.add("open");
-            }else{
+      for (let i = 0; i < collapsible.length; i++) {
+        if (collapsible[i].parentElement.getAttribute("category-tab") == category_tab_select) {
+          collapsible[i].parentElement.classList.add("open");
+        } else {
+          collapsible[i].parentElement.classList.remove("open");
+        }
+      }
+
+
+      collapsible.forEach((element) => {
+        element.addEventListener("click", (element) => {
+          if (!element.target.parentElement.classList.contains('open')) {
+            for (let i = 0; i < collapsible.length; i++) {
               collapsible[i].parentElement.classList.remove("open");
             }
+            element.target.parentElement.classList.add("open");
+          } else {
+            element.target.parentElement.classList.remove("open");
           }
-        
-        
-        collapsible.forEach((element) => {
-            element.addEventListener("click", (element) => {
-                if (!element.target.parentElement.classList.contains('open')) {
-                    for (let i = 0; i < collapsible.length; i++) {
-                        collapsible[i].parentElement.classList.remove("open");
-                    }
-                    element.target.parentElement.classList.add("open");
-                } else {
-                    element.target.parentElement.classList.remove("open");
-                }
-            });
         });
+      });
     }
-},
+  },
 }
 
 if ($('.swiperHome').length > 0) {
