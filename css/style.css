@@ -21,7 +21,7 @@
   top: 0;
   left: 0;
   height: 100vh;
-  background-color: #fff;
+  background-color: var(--color-azul);
   z-index: 100;
   transition: 1s ease; }
 
