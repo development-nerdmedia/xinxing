@@ -15,6 +15,19 @@
   --color-rojo: #E51A2F;
   --color-gris: #444444; }
 
+.loading {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 100;
+  transition: 1s ease; }
+
+.loading.ok {
+  transform: translateY(-100%); }
+
 .container {
   width: 90%;
   max-width: 1460px;
@@ -239,7 +252,9 @@ nav {
   justify-content: space-between;
   background-color: #fff;
   position: relative;
-  z-index: 5; }
+  z-index: 5;
+  transition: 1s ease;
+  transform: translateY(-100%); }
   nav .part1 ul,
   nav .part2 ul {
     display: flex;
@@ -308,6 +323,9 @@ nav {
       nav .part1 ul li.contacto:hover .marquee-with-options span,
       nav .part2 ul li.contacto:hover .marquee-with-options span {
         opacity: 1; }
+
+nav.ok {
+  transform: translateY(0); }
 
 /* Sweep To Right */
 .hvr-sweep-to-right {

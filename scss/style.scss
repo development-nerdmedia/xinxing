@@ -18,6 +18,21 @@
     --color-gris: #444444; 
 }
 
+.loading{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 100;
+    transition: 1s ease;
+}
+
+.loading.ok{
+    transform: translateY(-100%);
+}
+
 .container{
     width: 90%;
     max-width: 1460px;
@@ -309,6 +324,8 @@ nav{
     background-color: #fff;
     position: relative;
     z-index: 5;
+    transition: 1s ease;
+    transform: translateY(-100%);
     .part1,
     .part2{
         ul{
@@ -387,6 +404,10 @@ nav{
             }
         }
     }
+}
+
+nav.ok{
+    transform: translateY(0);
 }
 
 

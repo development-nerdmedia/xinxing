@@ -74,6 +74,12 @@ nodes.forEach((node) => new Item(node));
 
 
 $(document).ready(function () {
+  document.querySelector(".loading").classList.add("ok")
+
+  setTimeout(() => {
+    document.querySelector("nav").classList.add("ok")
+  }, 500);
+
   $("header .fex").hover(function () {
     document.querySelector("header").classList.add("open")
     document.querySelector(".filtroMain").classList.add("open")
