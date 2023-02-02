@@ -617,43 +617,125 @@ section.productosHome{
             border: 2px solid var(--color-azul);
             height: 510px;
             //padding-bottom: 40px;
-            padding: 40px 0;
-            justify-content: flex-end;
+            // padding: 40px 0;
+            // justify-content: flex-end;
             position: relative;
+            overflow: hidden;
             a{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                height: 100%;
+                width: 100%;
+                padding: 40px 0;
+                justify-content: flex-end;
             }
             .filtro{
+                // position: absolute;
+                // top: 0;
+                // left: 0;
+                // width: 100%;
+                // height: 100%;
+                // background-color: transparent;
+                // hide-initial-state
+                transform: rotate3d(1,0,0, 90deg);                
+                width: 100%;
+                height: 100%;
+                padding: 20px;
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: transparent;
+                border-radius: 4px;
+                pointer-events: none;
+                background-color: rgba(2, 70, 112, 0.23);
             }
             img{
                 width: auto;
+                z-index: 1;
+                pointer-events: none;
             }
             p{
                 font-family: var(--fuente-Montserrat);
                 font-weight: 700;
                 font-size: 25px;
                 color: var(--color-rojo);
+                z-index: 1;
+                pointer-events: none;
             }
             h4{
                 font-family: var(--fuente-Montserrat);
                 font-weight: 700;
                 font-size: 25px;
                 color: var(--color-azul);
+                z-index: 1;
+                pointer-events: none;
             }
-            &:hover{
-                .filtro{
-                    background-color: rgba(2, 70, 112, 0.23);
-                }
-            }
+            // &:hover{
+            //     .filtro{
+            //         background-color: rgba(2, 70, 112, 0.23);
+            //     }
+            // }
+            
         }
+        .in-top .filtro {
+            transform-origin: 50% 0%;
+            animation: in-top 300ms ease 0ms 1 forwards;
+         }
+         .in-right .filtro {
+           transform-origin: 100% 0%;
+           animation: in-right 300ms ease 0ms 1 forwards;
+         }
+         .in-bottom .filtro {
+           transform-origin: 50% 100%;
+           animation: in-bottom 300ms ease 0ms 1 forwards;
+         }
+         .in-left .filtro {
+           transform-origin: 0% 0%;
+           animation: in-left 300ms ease 0ms 1 forwards;
+         }
+         
+         .out-top .filtro {
+           transform-origin: 50% 0%;
+           animation: out-top 300ms ease 0ms 1 forwards;
+         }
+         .out-right .filtro {
+           transform-origin: 100% 50%;
+           animation: out-right 300ms ease 0ms 1 forwards;
+         }
+         .out-bottom .filtro {
+           transform-origin: 50% 100%;
+           animation: out-bottom 300ms ease 0ms 1 forwards;
+         }
+         .out-left .filtro {
+           transform-origin: 0% 0%;
+           animation: out-left 300ms ease 0ms 1 forwards;
+         }
+         
+         @keyframes in-top {
+           from {transform: rotate3d(-1,0,0, 90deg)}
+           to   {transform: rotate3d(0,0,0, 0deg)}}
+         @keyframes in-right {
+           from {transform: rotate3d(0,-1,0, 90deg)}
+           to   {transform: rotate3d(0,0,0, 0deg)}}
+         @keyframes in-bottom {
+           from {transform: rotate3d(1,0,0, 90deg)}
+           to   {transform: rotate3d(0,0,0, 0deg)}}
+         @keyframes in-left {
+           from {transform: rotate3d(0,1,0, 90deg)}
+           to   {transform: rotate3d(0,0,0, 0deg)}}
+         
+         @keyframes out-top {
+           from {transform: rotate3d(0,0,0, 0deg)}
+           to   {transform: rotate3d(-1,0,0, 104deg)}}
+         @keyframes out-right {
+           from {transform: rotate3d(0,0,0, 0deg)}
+           to   {transform: rotate3d(0,-1,0, 104deg)}}
+         @keyframes out-bottom {
+           from {transform: rotate3d(0,0,0, 0deg)}
+           to   {transform: rotate3d(1,0,0, 104deg)}}
+         @keyframes out-left {
+           from {transform: rotate3d(0,0,0, 0deg)}
+           to   {transform: rotate3d(0,1,0, 104deg)}}
         .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
             content: '';
             background-image: url(../img/flecha-prev.svg);
