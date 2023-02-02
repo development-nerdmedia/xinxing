@@ -73,12 +73,16 @@ a {
   z-index: 10;
   top: -65px;
   left: -65px;
-  z-index: 50; }
+  z-index: 50;
+  opacity: 0; }
   .ht-cursor .ht-cursor-text {
     transform: scale(0);
     transition: 0.3s linear; }
     .ht-cursor .ht-cursor-text img {
       animation: 6s rotate linear infinite; }
+
+.ht-cursor.ok {
+  opacity: 1; }
 
 .ht-cursor.mostrar .ht-cursor-text {
   transform: scale(1); }
@@ -147,7 +151,8 @@ header {
     background-color: var(--color-azul);
     border-radius: 0 0 30px 30px;
     transform: translateY(-100%);
-    transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1); }
+    transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    opacity: 0; }
     header .submenu .container {
       display: flex;
       padding: 0 90px; }
@@ -220,6 +225,8 @@ header {
             height: 40px;
             margin-right: 15px;
             border: 5px solid #C91A2C; }
+  header .submenu.ok {
+    opacity: 1; }
 
 header.open .submenu {
   transform: translateY(0%); }
@@ -646,10 +653,12 @@ section.productosHome {
       background-size: 100%; }
     section.productosHome .swiperCategoriasHome .swiper-button-prev, section.productosHome .swiperCategoriasHome .swiper-rtl .swiper-button-next {
       left: -14px;
-      right: auto; }
+      right: auto;
+      z-index: 2; }
     section.productosHome .swiperCategoriasHome .swiper-button-next, section.productosHome .swiperCategoriasHome .swiper-rtl .swiper-button-prev {
       right: -12px;
-      left: auto; }
+      left: auto;
+      z-index: 2; }
   section.productosHome .swiperCategoriasHome.page {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1351,7 +1360,9 @@ section.presentaciones {
       width: 147px;
       align-items: center; }
       section.presentaciones .listaProductos .item div img {
-        transition: 0.2s linear; }
+        transition: 0.2s linear;
+        max-height: 187px;
+        height: 100%; }
       section.presentaciones .listaProductos .item div:hover img {
         transform: scale(1.05); }
       section.presentaciones .listaProductos .item div a {
@@ -2227,6 +2238,12 @@ section.thanksPage {
     position: absolute;
     right: 309px;
     top: 80px; }
+    section.thanksPage .top .buttonEnlace {
+      margin-top: 0; }
+      section.thanksPage .top .buttonEnlace .circulo {
+        margin-right: 0;
+        font-size: 40px;
+        color: #fff; }
   section.thanksPage .content {
     width: 100%; }
   section.thanksPage .marquee-with-optionsTh {

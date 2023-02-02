@@ -86,6 +86,7 @@ a{
     top: -65px;
     left: -65px;
     z-index: 50;
+    opacity: 0;
     .ht-cursor-text{
         transform: scale(0);
         transition: 0.3s linear;
@@ -93,6 +94,9 @@ a{
             animation: 6s rotate linear infinite;
         }
     }
+}
+.ht-cursor.ok{
+    opacity: 1;
 }
 
 .ht-cursor.mostrar{
@@ -183,6 +187,7 @@ header{
         border-radius: 0 0 30px 30px; 
         transform: translateY(-100%);
         transition: transform .7s cubic-bezier(.19,1,.22,1);
+        opacity: 0;
         .container{
             display: flex;
             padding: 0 90px;
@@ -280,6 +285,9 @@ header{
                 }
             }
         }
+    }
+    .submenu.ok{
+        opacity: 1;
     }
 }
 
@@ -775,10 +783,12 @@ section.productosHome{
         .swiper-button-prev, .swiper-rtl .swiper-button-next {
             left: -14px;
             right: auto;
+            z-index: 2;
         }
         .swiper-button-next, .swiper-rtl .swiper-button-prev {
             right: -12px;
             left: auto;
+            z-index: 2;
         }
     }
     .swiperCategoriasHome.page{
@@ -1691,6 +1701,8 @@ section.presentaciones{
                 align-items: center;
                 img{
                     transition: 0.2s linear;
+                    max-height: 187px;
+                    height: 100%;
                 }
                 &:hover{
                     img{
@@ -2809,6 +2821,14 @@ section.thanksPage{
         position: absolute;
         right: 309px;
         top: 80px;
+        .buttonEnlace{
+            margin-top: 0;
+            .circulo{
+                margin-right: 0;
+                font-size: 40px;
+                color: #fff;
+            }
+        }
     }
     .content{
         width: 100%;

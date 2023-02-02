@@ -80,6 +80,11 @@ $(document).ready(function () {
     document.querySelector("nav").classList.add("ok")
   }, 1000);
 
+  setTimeout(() => {
+    document.querySelector(".submenu").classList.add("ok")
+    document.querySelector(".ht-cursor").classList.add("ok")
+  }, 2000);
+
   $("header .fex").hover(function () {
     document.querySelector("header").classList.add("open")
     document.querySelector(".filtroMain").classList.add("open")
