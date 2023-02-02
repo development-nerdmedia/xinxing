@@ -1,5 +1,5 @@
 $('.marquee-with-options').marquee({
-  duration: 5000,
+  duration: 6500,
   gap: 0,
   delayBeforeStart: 0,
   direction: 'left',
@@ -266,6 +266,9 @@ MyApp = {
         slidesPerGroup: 1,
         loop: true,
         loopFillGroupWithBlank: true,
+        autoplay: {
+          delay: 5000,
+        },
         // navigation: {
         //   nextEl: ".swiper-button-next",
         //   prevEl: ".swiper-button-prev",

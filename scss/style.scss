@@ -90,7 +90,7 @@ a{
     margin-top: 50px;
     display: flex;
     justify-content: center;
-    a{
+    a, button{
         display: flex;
         align-items: center;
         font-family: var(--fuente-Montserrat);
@@ -645,7 +645,6 @@ section.productosHome{
                 position: absolute;
                 top: 0;
                 left: 0;
-                border-radius: 4px;
                 pointer-events: none;
                 background-color: rgba(2, 70, 112, 0.23);
             }
@@ -833,24 +832,42 @@ section.woki{
             }
         }
         img.imgFloat{
-            position: absolute;
+            //position: absolute;
             animation: flotante 3s infinite ;
         }
-        img.if1{
+        .if1{
+            position: absolute;
             top: -232px;
             left: -300px;
         }
-        img.if2{
+        .if2{
+            position: absolute;
             right: -222px;
             top: -147px;
         }
-        img.if3{
+        .if3{
+            position: absolute;
             left: -263px;
             bottom: -269px;
         }
-        img.if4{
+        .if4{
+            position: absolute;
             bottom: -301px;
             right: -268px;
+        }
+        .contentImg{
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: -38px;
+                left: 55%;
+                transform: translateX(-50%);
+                width: 221px;
+                height: 20px;
+                background-color: #0000005e;
+                filter: blur(12px);
+                border-radius: 50%;
+            }
         }
     }
 }
@@ -1075,11 +1092,13 @@ section.blogHome{
                 right: 0;
                 left: initial;
                 width: 25px;
+                z-index: 1;
             }
             .swiper-button-prev{
                 right: 50px;
                 left: initial;
                 width: 25px;
+                z-index: 1;
             }
             .swiper-button-next:after{
                 content: '';
@@ -1649,6 +1668,14 @@ section.presentaciones{
                 flex-direction: column;
                 width: 147px;
                 align-items: center;
+                img{
+                    transition: 0.2s linear;
+                }
+                &:hover{
+                    img{
+                        transform: scale(1.05);
+                    }
+                }
                 a{
                     color: var(--color-rojo);
                     font-family: var(--fuente-Montserrat);
@@ -2615,6 +2642,12 @@ section.contactoPage{
                 cursor: pointer;
             }
         }
+        .buttonEnlace{
+            margin-top: 0;
+            img{
+                margin-right: 0;
+            }
+        }
     }
 }
 
@@ -2643,6 +2676,7 @@ section.tarjetaContacto{
                 width: 24.87px;
                 margin-top: 5px;
                 margin-right: 10px;
+                transition: 0.2s linear;
             }
             .text{
                 span{
@@ -2656,6 +2690,11 @@ section.tarjetaContacto{
                     font-weight: 400;
                     font-size: 20px;
                     line-height: 146.9%;
+                }
+            }
+            &:hover{
+                img{
+                    transform: translateX(5px);
                 }
             }
         }
@@ -3028,8 +3067,9 @@ section.acordeon{
         position: relative;
         //pointer-events: none;
         img{
-            transform: rotate(270deg);
+            transform: rotate(90deg);
             pointer-events: none;
+            width: 34px;
         }
         &::before{
             content: '';
@@ -3118,7 +3158,7 @@ section.acordeon{
     .faq-container.open{
         padding-bottom: 50px;
         .faq-collapsible img {
-            transform: rotate(90deg);
+            transform: rotate(270deg);
         }
         .faq-answer {
             padding-top: 40px;
