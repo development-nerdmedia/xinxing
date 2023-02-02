@@ -78,7 +78,7 @@ $(document).ready(function () {
 
   setTimeout(() => {
     document.querySelector("nav").classList.add("ok")
-  }, 500);
+  }, 1000);
 
   $("header .fex").hover(function () {
     document.querySelector("header").classList.add("open")
