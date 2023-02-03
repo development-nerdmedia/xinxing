@@ -1647,16 +1647,18 @@ section.nosotrosPage {
     section.nosotrosPage .content .part1 img {
       border-radius: 10px;
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); }
-    section.nosotrosPage .content .part2 p {
-      font-family: 'Lato';
-      font-weight: 400;
-      font-size: 20px;
-      color: #000;
-      margin: 20px 0; }
-    section.nosotrosPage .content .part2 p:first-child {
-      margin-top: 0; }
-    section.nosotrosPage .content .part2 p:last-child {
-      margin-bottom: 0; }
+    section.nosotrosPage .content .part2 {
+      overflow: hidden; }
+      section.nosotrosPage .content .part2 p {
+        font-family: 'Lato';
+        font-weight: 400;
+        font-size: 20px;
+        color: #000;
+        margin: 20px 0; }
+      section.nosotrosPage .content .part2 p:first-child {
+        margin-top: 0; }
+      section.nosotrosPage .content .part2 p:last-child {
+        margin-bottom: 0; }
 
 section.misionVision {
   padding-bottom: 100px;
