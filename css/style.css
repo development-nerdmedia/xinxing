@@ -90,7 +90,8 @@ a {
 .buttonEnlace {
   margin-top: 50px;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  overflow: hidden; }
   .buttonEnlace a, .buttonEnlace button {
     display: flex;
     align-items: center;
@@ -388,6 +389,8 @@ section.sliderHome {
       flex-direction: column;
       justify-content: space-between;
       padding-right: 100px; }
+      section.sliderHome .container .part1 .content-text {
+        overflow: hidden; }
       section.sliderHome .container .part1 h2 {
         font-family: var(--fuente-Montserrat);
         font-weight: 500;
@@ -475,6 +478,8 @@ section.sliderHome {
 section.productosHome {
   padding: 50px 0;
   padding-bottom: 100px; }
+  section.productosHome .container {
+    overflow: hidden; }
   section.productosHome .containerCerrado {
     display: flex;
     flex-direction: column;
@@ -658,7 +663,7 @@ section.productosHome {
     section.productosHome .swiperCategoriasHome .swiper-button-next, section.productosHome .swiperCategoriasHome .swiper-rtl .swiper-button-prev {
       right: -12px;
       left: auto;
-      z-index: 2; }
+      z-index: 3; }
   section.productosHome .swiperCategoriasHome.page {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -689,6 +694,12 @@ section.bannerAzul {
 section.woki {
   padding: 190px 0;
   overflow: hidden; }
+  section.woki .animation {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; }
   section.woki .container {
     display: flex;
     justify-content: center;
@@ -790,7 +801,8 @@ section.bannerSomos {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 97px;
     row-gap: 90px;
-    color: #fff; }
+    color: #fff;
+    overflow: hidden; }
     section.bannerSomos .gridSomos h3 {
       font-family: var(--fuente-Montserrat);
       font-weight: 700;
@@ -1593,6 +1605,16 @@ section.productosDestacados {
     section.productosDestacados .swiperProductosDestacados .item.swiper-slide-active {
       opacity: 1; }
 
+.oculto {
+  transition: 0.35s linear !important;
+  transform: translateY(100%) !important; }
+
+.visible {
+  transform: translateY(0%) !important; }
+
+.contentTextEfe {
+  overflow: hidden; }
+
 section.nosotrosPage {
   padding: 100px 0; }
   section.nosotrosPage .containerCerrado {
@@ -1602,6 +1624,8 @@ section.nosotrosPage {
     justify-content: center; }
     section.nosotrosPage .containerCerrado .title {
       margin-bottom: 80px; }
+      section.nosotrosPage .containerCerrado .title div {
+        overflow: hidden; }
   section.nosotrosPage h3 {
     font-family: var(--fuente-Montserrat);
     font-weight: 700;
@@ -1641,7 +1665,6 @@ section.misionVision {
     display: flex;
     grid-gap: 12px; }
     section.misionVision .containerCerrado div {
-      padding: 50px 0;
       font-family: var(--fuente-Montserrat);
       position: relative; }
       section.misionVision .containerCerrado div span {
@@ -1658,8 +1681,11 @@ section.misionVision {
         font-size: 20px;
         color: #000;
         margin-top: 20px; }
+    section.misionVision .containerCerrado span {
+      display: block; }
     section.misionVision .containerCerrado .part1 {
       border-right: 1px solid var(--color-azul);
+      padding: 50px 0;
       padding-right: 100px;
       width: 50%; }
       section.misionVision .containerCerrado .part1::before {
@@ -1678,8 +1704,11 @@ section.misionVision {
         width: 200%;
         height: 1px;
         background-color: var(--color-azul); }
+      section.misionVision .containerCerrado .part1 div {
+        overflow: hidden; }
     section.misionVision .containerCerrado .part2 {
       border-left: 1px solid var(--color-azul);
+      padding: 50px 0;
       padding-left: 100px;
       width: 50%; }
       section.misionVision .containerCerrado .part2::before {
@@ -1712,7 +1741,8 @@ section.valores {
       section.valores .content .part1 span {
         font-weight: 700;
         font-size: 35px;
-        color: var(--color-rojo); }
+        color: var(--color-rojo);
+        display: block; }
       section.valores .content .part1 h2 {
         font-weight: 700;
         font-size: 35px;

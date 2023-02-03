@@ -109,6 +109,7 @@ a{
     margin-top: 50px;
     display: flex;
     justify-content: center;
+    overflow: hidden;
     a, button{
         display: flex;
         align-items: center;
@@ -474,6 +475,9 @@ section.sliderHome{
             flex-direction: column;
             justify-content: space-between;
             padding-right: 100px;
+            .content-text{
+                overflow: hidden;
+            }
             h2{
                 font-family: var(--fuente-Montserrat);
                 font-weight: 500;
@@ -587,6 +591,9 @@ section.sliderHome{
 section.productosHome{
     padding: 50px 0;
     padding-bottom: 100px;
+    .container{
+        overflow: hidden;
+    }
     .containerCerrado{
         display: flex;
         flex-direction: column;
@@ -788,7 +795,7 @@ section.productosHome{
         .swiper-button-next, .swiper-rtl .swiper-button-prev {
             right: -12px;
             left: auto;
-            z-index: 2;
+            z-index: 3;
         }
     }
     .swiperCategoriasHome.page{
@@ -831,6 +838,13 @@ section.bannerAzul{
 section.woki{
     padding: 190px 0;
     overflow: hidden;
+    .animation{
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
     .container{
         display: flex;
         justify-content: center;
@@ -958,6 +972,7 @@ section.bannerSomos{
         column-gap: 97px;
         row-gap: 90px;
         color: #fff;
+        overflow: hidden;
         h3{
             font-family: var(--fuente-Montserrat);
             font-weight: 700;
@@ -2007,6 +2022,17 @@ section.productosDestacados{
     }
 }
 
+.oculto{
+    transition: 0.35s linear !important;
+    transform: translateY(100%) !important;
+}
+.visible{
+    transform: translateY(0%) !important;
+}
+.contentTextEfe{
+    overflow: hidden;
+}
+
 
 section.nosotrosPage{
     padding: 100px 0;
@@ -2017,6 +2043,9 @@ section.nosotrosPage{
         justify-content: center;
         .title{
             margin-bottom: 80px;
+            div{
+                overflow: hidden;
+            }
         }
     }
     h3{
@@ -2070,7 +2099,6 @@ section.misionVision{
         display: flex;
         grid-gap: 12px;
         div{
-            padding: 50px 0;
             font-family: var(--fuente-Montserrat);
             position: relative;
             span{
@@ -2091,8 +2119,12 @@ section.misionVision{
                 margin-top: 20px;
             }
         }
+        span{
+            display: block;
+        }
         .part1{
-            border-right: 1px solid var(--color-azul);
+            border-right: 1px solid var(--color-azul);            
+            padding: 50px 0;
             padding-right: 100px;
             width: 50%;
             &::before{
@@ -2113,9 +2145,13 @@ section.misionVision{
                 height: 1px;
                 background-color: var(--color-azul);
             }
+            div{
+                overflow: hidden;
+            }
         }
         .part2{
-            border-left: 1px solid var(--color-azul);
+            border-left: 1px solid var(--color-azul);            
+            padding: 50px 0;
             padding-left: 100px;
             width: 50%;
             &::before{
@@ -2154,6 +2190,7 @@ section.valores{
                 font-weight: 700;
                 font-size: 35px;
                 color: var(--color-rojo);
+                display: block;
             }
             h2{
                 font-weight: 700;

@@ -1,3 +1,5 @@
+
+
 $('.marquee-with-options').marquee({
   duration: 6500,
   gap: 0,
@@ -38,6 +40,8 @@ $('.marquee-with-optionsTh').marquee({
 });
 
 
+
+
 // - Noel Delgado | @pixelia_me
 
 const nodes = [].slice.call(document.querySelectorAll("section.productosHome .swiperCategoriasHome .swiper-slide"), 0);
@@ -75,15 +79,67 @@ nodes.forEach((node) => new Item(node));
 
 $(document).ready(function () {
   document.querySelector(".loading").classList.add("ok")
+  setTimeout(() => {
+    AOS.init();
+  }, 200);
 
   setTimeout(() => {
     document.querySelector("nav").classList.add("ok")
+    AOS.init();
   }, 1000);
 
   setTimeout(() => {
     document.querySelector(".submenu").classList.add("ok")
     document.querySelector(".ht-cursor").classList.add("ok")
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    function addClassToVisibleElements(elements, className) {
+      elements.forEach(element => {
+        if (isInViewport(element)) {
+          element.classList.add(className);
+        }
+        // else {      
+        //   element.classList.remove(className);
+        // }
+      });
+    }
+
+    const elements = document.querySelectorAll(".oculto");
+    addClassToVisibleElements(elements, "visible");
   }, 2000);
+
+  setTimeout(() => {
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    function addClassToVisibleElements(elements, className) {
+      elements.forEach(element => {
+        if (isInViewport(element)) {
+          element.classList.add(className);
+        }
+      });
+    }
+    const elements = document.querySelectorAll(".oculto");
+
+    window.addEventListener("scroll", function () {
+      addClassToVisibleElements(elements, "visible");
+    });
+  }, 1500);
 
   $("header .fex").hover(function () {
     document.querySelector("header").classList.add("open")
