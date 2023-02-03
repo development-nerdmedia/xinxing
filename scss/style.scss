@@ -2255,6 +2255,7 @@ section.valores{
 
 section.organizacionNosotros{
     padding: 100px 0;
+    overflow: hidden;
     .containerCerrado{
         display: flex;
         grid-gap: 180px;
@@ -2290,8 +2291,16 @@ section.organizacionNosotros{
                 background-color: var(--color-azul);
                 transform: translateX(-46%);
                 border-radius: 0 40px 40px 0;
+                transition: 0.5s ease;
+                transform: translateX(-150%);
             }
         }
+        .part1.bloqueIzq.active{
+            &::before{
+                transform: translateX(-46%);
+            }
+        }
+
         .part2{
             padding-top: 100px;
             position: relative;
@@ -2300,10 +2309,17 @@ section.organizacionNosotros{
                 position: absolute;
                 top: 35%;
                 left: 50%;
+                left: 160%;
                 width: 100%;
                 height: 200px;
                 background-color: var(--color-rojo);
                 border-radius: 40px 0 0 40px;
+                transition: 0.5s ease;
+            }
+        }
+        .part2.bloqueDer.active{
+            &::before{
+                left: 56%;
             }
         }
     }

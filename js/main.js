@@ -104,39 +104,31 @@ $(document).ready(function () {
       });
     }
     const elements = document.querySelectorAll(".oculto");
+    const elementsBloqueIzq = document.querySelectorAll(".bloqueIzq");
+    const elementsBloqueDer = document.querySelectorAll(".bloqueDer");
+
     addClassToVisibleElements(elements, "visible");
 
     window.addEventListener("scroll", function () {
       addClassToVisibleElements(elements, "visible");
     });
+
+    /* PARA BLOQUES */
+
+    window.addEventListener("scroll", function () {
+      addClassToVisibleElements(elementsBloqueIzq, "active");
+    });
+
+    window.addEventListener("scroll", function () {
+      addClassToVisibleElements(elementsBloqueDer, "active");
+    });
+
+
   }, 1000);
 
   setTimeout(() => {
     document.querySelector(".submenu").classList.add("ok")
     document.querySelector(".ht-cursor").classList.add("ok")
-    function isInViewport(element) {
-      const rect = element.getBoundingClientRect();
-      return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-      );
-    }
-
-    function addClassToVisibleElements(elements, className) {
-      elements.forEach(element => {
-        if (isInViewport(element)) {
-          element.classList.add(className);
-        }
-        // else {      
-        //   element.classList.remove(className);
-        // }
-      });
-    }
-
-    const elements = document.querySelectorAll(".oculto");
-    addClassToVisibleElements(elements, "visible");
   }, 2000);
 
   setTimeout(() => {
