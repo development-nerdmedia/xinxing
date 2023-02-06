@@ -79,9 +79,9 @@ nodes.forEach((node) => new Item(node));
 
 $(document).ready(function () {
   document.querySelector(".loading").classList.add("ok")
-  setTimeout(() => {
-    AOS.init();
-  }, 200);
+ // setTimeout(() => {
+ //   AOS.init();
+ // }, 200);
 
   setTimeout(() => {
     document.querySelector("nav").classList.add("ok")
@@ -124,7 +124,7 @@ $(document).ready(function () {
     });
 
 
-  }, 1000);
+  }, 500);
 
   setTimeout(() => {
     document.querySelector(".submenu").classList.add("ok")

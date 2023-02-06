@@ -2068,6 +2068,7 @@ section.nosotrosPage{
         display: flex;
         justify-content: space-between;
         grid-gap: 111px;
+        align-items: flex-start;
         .part1{
             img{
                 border-radius: 10px;
