@@ -79,10 +79,6 @@ nodes.forEach((node) => new Item(node));
 
 $(document).ready(function () {
   document.querySelector(".loading").classList.add("ok")
- // setTimeout(() => {
- //   AOS.init();
- // }, 200);
-
   setTimeout(() => {
     document.querySelector("nav").classList.add("ok")
     AOS.init();
@@ -106,23 +102,18 @@ $(document).ready(function () {
     const elements = document.querySelectorAll(".oculto");
     const elementsBloqueIzq = document.querySelectorAll(".bloqueIzq");
     const elementsBloqueDer = document.querySelectorAll(".bloqueDer");
+    const elementsSlider = document.querySelectorAll(".swiper-wrapper");
 
     addClassToVisibleElements(elements, "visible");
+    addClassToVisibleElements(elementsSlider, "mostrar");
 
     window.addEventListener("scroll", function () {
-      addClassToVisibleElements(elements, "visible");
-    });
-
-    /* PARA BLOQUES */
-
-    window.addEventListener("scroll", function () {
+      addClassToVisibleElements(elements, "visible");      
+      addClassToVisibleElements(elementsSlider, "mostrar");
+      /* PARA BLOQUES */
       addClassToVisibleElements(elementsBloqueIzq, "active");
-    });
-
-    window.addEventListener("scroll", function () {
       addClassToVisibleElements(elementsBloqueDer, "active");
     });
-
 
   }, 500);
 
@@ -204,7 +195,6 @@ document.addEventListener("click", (e) => {
 
 $('.follow').mouseleave(function (e) {
   TweenMax.to('.follow', 0.3, { scale: 1, x: 0, y: 0 });
-
 });
 
 $('.follow').mouseenter(function (e) {
@@ -234,7 +224,6 @@ function parallaxIt(e, target, movement) {
 
 $('.followProducto').mouseleave(function (e) {
   TweenMax.to('.followProducto', 0.3, { scale: 1, x: 0, y: 0 });
-
 });
 
 $('.followProducto').mouseenter(function (e) {
@@ -346,7 +335,7 @@ MyApp = {
       //}
 
       let listaTitle = [];
-      const enlaces = document.querySelectorAll('#categorias li');
+      const enlaces = document.querySelectorAll('#categorias li span');
       for (let i = 0; i < enlaces.length; i++) {
         textoitem = enlaces[i].textContent;
         listaTitle.push(textoitem);
@@ -363,7 +352,7 @@ MyApp = {
 
       $('.itemArticulo').hide();
 
-      var categoryMain = document.querySelector('#categorias li.select').innerHTML;
+      var categoryMain = document.querySelector('#categorias li.select span').innerHTML;
 
       if (categoryMain === "Todos") {
         $(`.itemArticulo`).show(0);
@@ -541,6 +530,27 @@ MyApp = {
           } else {
             element.target.parentElement.classList.remove("open");
           }
+
+          function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+              rect.top >= 0 &&
+              rect.left >= 0 &&
+              rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+              rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+          }
+      
+          function addClassToVisibleElements(elements, className) {
+            elements.forEach(element => {
+              if (isInViewport(element)) {
+                element.classList.add(className);
+              }
+            });
+          }
+
+          const elements = document.querySelectorAll(".oculto");
+          addClassToVisibleElements(elements, "visible");
         });
       });
     }
