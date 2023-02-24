@@ -4,15 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <meta
+      property="og:title"
+      content="XinXing - Insumos alimenticios orientales"
+    />
+    <meta
+      property="og:image"
+      content="https://xinxing.digitalminds.site/img/metaimage.jpg"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Xin Xing - Inicio</title>
+    <title>Xinxing - Inicio</title>
   </head>
-  <body>
+  <body class="page-home">
     <header>
       <div class="container">
         <nav>
@@ -38,6 +47,10 @@
                   </div>
                 </a>
               </li>
+              <li class="submenu-icon">
+                <img src="img/nav-movil.svg" class="open mostrar" alt="" />
+                <img src="img/nav-movil-close.svg" class="close" alt="" />
+              </li>
             </ul>
           </div>
         </nav>
@@ -46,28 +59,44 @@
         <div class="container">
           <div class="part1">
             <ul>
-              <li class="select"><a href="">Aceites</a></li>
-              <li><a href="">Bebidas</a></li>
-              <li><a href="">Condimentos y especias</a></li>
-              <li><a href="">Conservas</a></li>
-              <li><a href="">Deshidratados</a></li>
-              <li><a href="">Fideos</a></li>
-              <li><a href="">Arroz</a></li>
-              <li><a href="">Galletas y Golosinas</a></li>
-              <li><a href="">Harinas</a></li>
-              <li><a href="">Infusiones</a></li>
-              <li><a href="">Menestras</a></li>
-              <li><a href="">Salsas</a></li>
-              <li><a href="">Sillaos</a></li>
-              <li><a href="">Sopas</a></li>
-              <li><a href="">Tapers</a></li>
-              <li><a href="">Utensilios</a></li>
-              <li><a href="">Licores</a></li>
-              <li><a href="">Vinagre</a></li>
-              <li><a href="">Electrodomésticos</a></li>
-              <li><a href="">Paños y Servilletas</a></li>
-              <li><a href="">Otros productos</a></li>
-              <li><a href="">Adornos Orientales</a></li>
+              <li><a href="productos/aceites.html">Aceites</a></li>
+              <li><a href="productos/bebidas.html">Bebidas</a></li>
+              <li>
+                <a href="productos/condimentos-y-especias.html"
+                  >Condimentos y especias</a
+                >
+              </li>
+              <li><a href="productos/conservas.html">Conservas</a></li>
+              <!-- <li><a href="productos/deshidratados.html">Deshidratados</a></li> -->
+              <li><a href="productos/fideos.html">Fideos</a></li>
+              <!-- <li><a href="productos/arroz.html">Arroz</a></li> -->
+              <li>
+                <a href="productos/galletas-y-golosinas.html"
+                  >Galletas y Golosinas</a
+                >
+              </li>
+              <li><a href="productos/harinas.html">Harinas</a></li>
+              <li><a href="productos/infusiones.html">Infusiones</a></li>
+              <!--  <li><a href="productos/menestras.html">Menestras</a></li> -->
+              <li><a href="productos/salsas.html">Salsas</a></li>
+              <li><a href="productos/sillaos.html">Sillaos</a></li>
+              <!-- <li><a href="productos/sopas.html">Sopas</a></li> -->
+              <li><a href="productos/tapers.html">Tapers</a></li>
+              <li><a href="productos/utensilios.html">Utensilios</a></li>
+              <li>
+                <a href="productos/licores-y-vinos.html">Licores y vinos</a>
+              </li>
+              <li><a href="productos/vinagres.html">Vinagres</a></li>
+              <!-- <li><a href="productos/electrodomesticos.html">Electrodomésticos</a></li> -->
+              <li>
+                <a href="productos/paños-y-servilletas.html"
+                  >Paños y Servilletas</a
+                >
+              </li>
+              <li>
+                <a href="productos/otros-productos.html">Otros productos</a>
+              </li>
+              <!-- <li><a href="productos/adorno-orientales.html">Adornos Orientales</a></li> -->
             </ul>
             <div class="buttonEnlace">
               <a href="productos.html">
@@ -85,7 +114,7 @@
               <img src="img/img-submenu-producto.png" alt="" class="producto" />
               <div class="info">
                 <div class="buttonEnlace">
-                  <a href="productos.html">
+                  <a href="productos/woki.html">
                     <div class="circulo">
                       <img src="img/flecha-blanca.svg" alt="" />
                     </div>
@@ -99,19 +128,79 @@
       </div>
     </header>
     <main>
-      <div class="loading"></div>
+      <div class="btnWhatsapp">
+        <a href="" target="_blank">
+          <img src="../img/logo_wzp.svg" alt="">
+        </a>
+      </div>
+      <div class="container btncontacto">
+        <a href="contacto.html" class="contactoMobil">Contacto</a>
+      </div>
+      <div class="loading">
+        <div class="logo">
+          <img src="img/xinxingBlanco.svg" alt="" />
+          <div class="line">
+            <span></span>
+          </div>
+        </div>
+      </div>
       <div class="ht-cursor">
         <div class="ht-cursor-text">
           <img src="img/vermas.svg" alt="" />
         </div>
       </div>
-
+      <section class="menuMovil">
+        <div class="containerCerrado">
+          <ul>
+            <li>
+              <a href="productos.html">Productos</a>
+              <ul>
+                <li><a href="productos/woki.html">Woki</a></li>
+                <li><a href="productos/aceites.html">Aceites</a></li>
+                <li><a href="productos/bebidas.html">Bebidas</a></li>
+                <li>
+                  <a href="productos/condimentos-y-especias.html"
+                    >Condimentos y especias</a
+                  >
+                </li>
+                <li><a href="productos/conservas.html">Conservas</a></li>
+                <li><a href="productos/fideos.html">Fideos</a></li>
+                <li>
+                  <a href="productos/galletas-y-golosinas.html"
+                    >Galletas y Golosinas</a
+                  >
+                </li>
+                <li><a href="productos/harinas.html">Harinas</a></li>
+                <li><a href="productos/infusiones.html">Infusiones</a></li>
+                <li><a href="productos/salsas.html">Salsas</a></li>
+                <li><a href="productos/sillaos.html">Sillaos</a></li>
+                <li><a href="productos/tapers.html">Tapers</a></li>
+                <li><a href="productos/utensilios.html">Utensilios</a></li>
+                <li>
+                  <a href="productos/licores-y-vinos.html">Licores y vinos</a>
+                </li>
+                <li><a href="productos/vinagres.html">Vinagres</a></li>
+                <li>
+                  <a href="productos/paños-y-servilletas.html"
+                    >Paños y Servilletas</a
+                  >
+                </li>
+                <li>
+                  <a href="productos/otros-productos.html">Otros productos</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </section>
       <div class="filtroMain"></div>
 
       <section class="sliderHome">
         <div class="container">
           <div class="part1">
-            <div class="contentTextEfe">
+            <div class="contentTextEfe titleChino">
               <h2 class="oculto">上千种中国 进口产品</h2>
             </div>
             <div class="info">
@@ -119,11 +208,13 @@
                 <h1 class="oculto">Miles de productos de China</h1>
               </div>
               <div class="contentTextEfe pText">
-                <p class="oculto">Para chifas, restaurantes y negocios de alimentos en general.</p>
+                <p class="oculto">
+                  Para chifas, restaurantes y negocios de alimentos en general.
+                </p>
               </div>
               <div class="contentTextEfe">
                 <a href="productos.html" class="hover oculto">
-                <span>Conoce todos los productos</span>
+                  <span>Conoce todos los productos</span>
                   <div class="marquee-with-options">
                     <span>Conoce todos los productos - 了解所有產品 -</span>
                   </div>
@@ -192,7 +283,9 @@
             <h3 class="oculto">Productos</h3>
           </div>
           <div class="contentTextEfe">
-            <h2 class="oculto">Gran variedad de productos y artículos importados de China</h2>
+            <h2 class="oculto">
+              Gran variedad de productos y artículos importados de China
+            </h2>
           </div>
         </div>
         <div class="container2">
@@ -211,11 +304,11 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="productos/aceites.html">
+                <a href="productos/bebidas.html">
                   <div class="filtro"></div>
                   <img src="img/categoria2.png" alt="" />
                   <div class="contentTextEfe">
-                    <p class="oculto">饮料</p>
+                    <p class="oculto">飲料</p>
                   </div>
                   <div class="contentTextEfe">
                     <h4 class="oculto">Bebidas</h4>
@@ -223,11 +316,11 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="productos/aceites.html">
+                <a href="productos/condimentos-y-especias.html">
                   <div class="filtro"></div>
                   <img src="img/categoria3.png" alt="" />
                   <div class="contentTextEfe">
-                    <p class="oculto">调味品和香料</p>
+                    <p class="oculto">調味品和香料</p>
                   </div>
                   <div class="contentTextEfe">
                     <h4 class="oculto">Condimentos y Especias</h4>
@@ -235,11 +328,11 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="productos/aceites.html">
+                <a href="productos/conservas.html">
                   <div class="filtro"></div>
                   <img src="img/categoria4.png" alt="" />
                   <div class="contentTextEfe">
-                    <p class="oculto">果酱</p>
+                    <p class="oculto">果醬</p>
                   </div>
                   <div class="contentTextEfe">
                     <h4 class="oculto">Conservas</h4>
@@ -247,11 +340,11 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="productos/aceites.html">
+                <a href="productos/fideos.html">
                   <div class="filtro"></div>
                   <img src="img/categoria5.png" alt="" />
                   <div class="contentTextEfe">
-                    <p class="oculto">果酱</p>
+                    <p class="oculto">麵條</p>
                   </div>
                   <div class="contentTextEfe">
                     <h4 class="oculto">Fideos</h4>
@@ -259,23 +352,23 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="productos/aceites.html">
+                <a href="productos/galletas-y-golosinas.html">
                   <div class="filtro"></div>
                   <img src="img/categoria6.png" alt="" />
                   <div class="contentTextEfe">
-                    <p class="oculto">果酱</p>
+                    <p class="oculto">糖果</p>
                   </div>
                   <div class="contentTextEfe">
-                    <h4 class="oculto">Golosinas</h4>
+                    <h4 class="oculto">Galletas y golosinas</h4>
                   </div>
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="productos/aceites.html">
+                <a href="productos/harinas.html">
                   <div class="filtro"></div>
                   <img src="img/categoria7.png" alt="" />
                   <div class="contentTextEfe">
-                    <p class="oculto">果酱</p>
+                    <p class="oculto">麵粉</p>
                   </div>
                   <div class="contentTextEfe">
                     <h4 class="oculto">Harinas</h4>
@@ -283,11 +376,11 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="productos/aceites.html">
+                <a href="productos/infusiones.html">
                   <div class="filtro"></div>
                   <img src="img/categoria8.png" alt="" />
                   <div class="contentTextEfe">
-                    <p class="oculto">果酱</p>
+                    <p class="oculto">輸液</p>
                   </div>
                   <div class="contentTextEfe">
                     <h4 class="oculto">Infusiones</h4>
@@ -295,11 +388,11 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="productos/aceites.html">
+                <a href="productos/licores-y-vinos.html">
                   <div class="filtro"></div>
                   <img src="img/categoria9.png" alt="" />
                   <div class="contentTextEfe">
-                    <p class="oculto">果酱</p>
+                    <p class="oculto">烈酒和葡萄酒</p>
                   </div>
                   <div class="contentTextEfe">
                     <h4 class="oculto">Licones y vinos</h4>
@@ -307,23 +400,23 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="productos/aceites.html">
+                <a href="productos/paños-y-servilletas.html">
                   <div class="filtro"></div>
                   <img src="img/categoria10.png" alt="" />
                   <div class="contentTextEfe">
-                    <p class="oculto">果酱</p>
+                    <p class="oculto">毛巾和餐巾</p>
                   </div>
                   <div class="contentTextEfe">
                     <h4 class="oculto">Paños y servilletas</h4>
-                  </div>                  
+                  </div>
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="productos/aceites.html">
+                <a href="productos/salsas.html">
                   <div class="filtro"></div>
                   <img src="img/categoria11.png" alt="" />
                   <div class="contentTextEfe">
-                    <p class="oculto">果酱</p>
+                    <p class="oculto">醬料</p>
                   </div>
                   <div class="contentTextEfe">
                     <h4 class="oculto">Salsas</h4>
@@ -331,11 +424,11 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="productos/aceites.html">
+                <a href="productos/sillaos.html">
                   <div class="filtro"></div>
                   <img src="img/categoria12.png" alt="" />
                   <div class="contentTextEfe">
-                    <p class="oculto">果酱</p>
+                    <p class="oculto">椅子</p>
                   </div>
                   <div class="contentTextEfe">
                     <h4 class="oculto">Sillaos</h4>
@@ -343,11 +436,11 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="productos/aceites.html">
+                <a href="productos/tapers.html">
                   <div class="filtro"></div>
                   <img src="img/categoria13.png" alt="" />
                   <div class="contentTextEfe">
-                    <p class="oculto">果酱</p>
+                    <p class="oculto">錐度</p>
                   </div>
                   <div class="contentTextEfe">
                     <h4 class="oculto">Tapers</h4>
@@ -355,11 +448,11 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="productos/aceites.html">
+                <a href="productos/utensilios.html">
                   <div class="filtro"></div>
                   <img src="img/categoria14.png" alt="" />
                   <div class="contentTextEfe">
-                    <p class="oculto">果酱</p>
+                    <p class="oculto">餐具</p>
                   </div>
                   <div class="contentTextEfe">
                     <h4 class="oculto">Utensilios</h4>
@@ -367,11 +460,11 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="productos/aceites.html">
+                <a href="productos/vinagres.html">
                   <div class="filtro"></div>
                   <img src="img/categoria15.png" alt="" />
                   <div class="contentTextEfe">
-                    <p class="oculto">果酱</p>                    
+                    <p class="oculto">醋</p>
                   </div>
                   <div class="contentTextEfe">
                     <h4 class="oculto">Vinagres</h4>
@@ -379,11 +472,11 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="productos/aceites.html">
+                <a href="productos/woki.html">
                   <div class="filtro"></div>
                   <img src="img/categoria16.png" alt="" />
                   <div class="contentTextEfe">
-                    <p class="oculto">果酱</p>
+                    <p class="oculto">哇哇</p>
                   </div>
                   <div class="contentTextEfe">
                     <h4 class="oculto">Woki</h4>
@@ -391,14 +484,14 @@
                 </a>
               </div>
               <div class="swiper-slide">
-                <a href="productos/aceites.html">
+                <a href="productos/otros-productos.html">
                   <div class="filtro"></div>
                   <img src="img/categoria17.png" alt="" />
                   <div class="contentTextEfe">
-                    <p class="oculto">果酱</p>
+                    <p class="oculto">其他產品</p>
                   </div>
                   <div class="contentTextEfe">
-                    <h4 class="oculto">Otros productos</h4>                    
+                    <h4 class="oculto">Otros productos</h4>
                   </div>
                 </a>
               </div>
@@ -408,10 +501,7 @@
           </div>
         </div>
         <div class="buttonEnlace">
-          <a
-            href="productos.html"
-            class="oculto"
-          >
+          <a href="productos.html" class="oculto">
             <div class="circulo">
               <img src="img/flecha-blanca.svg" alt="" />
             </div>
@@ -423,17 +513,18 @@
       <section class="bannerAzul">
         <div class="containerCerrado">
           <div class="contentTextEfe">
-            <h2 data-aos="fade-up" data-aos-once="true" data-aos-duration="1000">
+            <h2
+              data-aos="fade-up"
+              data-aos-once="true"
+              data-aos-duration="1000"
+            >
               Más de 20 años de presencia en el mercado. Contamos con
               <b>OFICINA COMERCIAL EN CHINA</b> para contactar las mejores
               fábricas de los productos que importamos.
             </h2>
           </div>
           <div class="buttonEnlace contentTextEfe">
-            <a
-              href="nosotros.html"
-              class="oculto"
-            >
+            <a href="nosotros.html" class="oculto">
               <div class="circulo">
                 <img src="img/flecha-blanca.svg" alt="" />
               </div>
@@ -446,25 +537,23 @@
       <section class="woki">
         <div class="container">
           <div class="content">
-            <div
-              class="animation"
-            >
-              <img src="img/log-woki.png" alt=""/>
+            <div class="animation">
+              <img src="img/log-woki.png" alt="" />
               <div class="contentTextEfe">
                 <p class="oculto">
                   <b>WOKI</b> es nuestra marca propia, símbolo de calidad,
                   tradición y sabor oriental, cuenta con una gran variedad de
-                  productos elaborados en China por fabricantes certificados y de
-                  garantía.
+                  productos elaborados en China por fabricantes certificados y
+                  de garantía.
                 </p>
               </div>
             </div>
             <div class="buttonEnlace contentTextEfe">
-              <a href="woki.html" class="oculto">
+              <a href="productos/woki.html" class="oculto">
                 <div class="circulo">
                   <img src="img/flecha-blanca.svg" alt="" />
                 </div>
-                Ver todos los productos
+                Ver nuestros productos
               </a>
             </div>
             <div class="if1 contentImg">
@@ -486,9 +575,7 @@
       <section class="bannerSomos">
         <div class="containerCerrado">
           <div class="contentTextEfe title">
-            <h2 class="oculto">
-              Somos la mejor opción
-            </h2>
+            <h2 class="oculto">Somos la mejor opción</h2>
           </div>
           <div class="gridSomos">
             <div class="item">
@@ -541,10 +628,7 @@
               <h2 class="oculto">“El cliente es nuestra razón de ser”</h2>
             </div>
             <div class="buttonEnlace contentTextEfe">
-              <a
-                href="contacto.html"
-                class="oculto"
-              >
+              <a href="contacto.html" class="oculto">
                 <div class="circulo">
                   <img src="img/flecha-blanca.svg" alt="" />
                 </div>
@@ -594,7 +678,7 @@
             <div class="contentTextEfe">
               <h2 class="oculto">
                 Encuentra lo mejor sobre cultura y gastronomía oriental
-              </h2>              
+              </h2>
             </div>
           </div>
           <div class="flechas">
@@ -633,7 +717,7 @@
                   <div class="contentTextEfe">
                     <span class="oculto">11 - 03 - 2022</span>
                   </div>
-                  <div class="contentTextEfe title">  
+                  <div class="contentTextEfe title">
                     <h3 class="oculto">
                       Lorem ipsum dolor sit amet consectetur.
                     </h3>
@@ -642,7 +726,7 @@
                     <div class="circulo oculto">
                       <img src="img/flecha-blanca.svg" alt="" />
                     </div>
-                  </div>                  
+                  </div>
                 </div>
               </a>
             </div>
@@ -657,7 +741,7 @@
                   <div class="contentTextEfe title">
                     <h3 class="oculto">
                       Lorem ipsum dolor sit amet consectetur.
-                    </h3>                    
+                    </h3>
                   </div>
                   <div class="contentTextEfe">
                     <div class="circulo oculto">
@@ -785,8 +869,8 @@
             <div class="redes">
               <span>Síguenos:</span>
               <div class="icons">
-                <a href=""><img src="img/icon-facebook.svg" alt="" /></a>
-                <a href=""><img src="img/icon-instagram.svg" alt="" /></a>
+                <a href="https://www.facebook.com/XinxingImportaciones" target="_blank"><img src="img/icon-facebook.svg" alt="" /></a>
+                <a href="https://www.instagram.com/xinxingimportaciones/?next=%2Fnicolas.lopez.art%2F" target="_blank"><img src="img/icon-instagram.svg" alt="" /></a>
               </div>
             </div>
           </div>
@@ -806,7 +890,7 @@
       <div class="pie">
         <div class="containerCerrado">
           <p><b>XINXING</b> - ©2023 Todos los derechos reservados</p>
-          <p>Hecho por <img src="img/icon-nerd.svg" alt="" /></p>
+          <p>Made with <img src="img/icon-nerd.svg" alt="" /></p>
         </div>
       </div>
     </footer>
