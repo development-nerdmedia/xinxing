@@ -544,8 +544,11 @@ MyApp = {
           '1441': {
             slidesPerView: 3,
           },
-          '1025': {
+          '1201': {
             slidesPerView: 2.7,
+          },
+          '1025': {
+            slidesPerView: 2.5,
           },
           '901': {
             slidesPerView: 2,
