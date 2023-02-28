@@ -30,39 +30,45 @@ if (window.matchMedia("(min-width: 501px)").matches) {
     direction: 'left',
     duplicated: true,
   });
+
+  var contentImg = document.querySelectorAll("section.woki .container .content")
+
+  for (let i = 0; i < contentImg.length; i++) {
+    contentImg[i].classList.add("mostrar")    
+  }
+
 }
 
-
-if (window.matchMedia("(max-width: 1201px)").matches) {
-  document.querySelector("header li.fex").addEventListener("click", function(e) {
-    e.preventDefault();
-    document.querySelector("header").classList.toggle("open");    
-    document.querySelector(".filtroMain").classList.toggle("open")      
-  });
-  $("header .fex").hover(function () {
-  }), function () {
-    document.querySelector("header").classList.remove("open")
-    document.querySelector(".filtroMain").classList.remove("open")
-  };
-  $("main").hover(function () {
-    document.querySelector("header").classList.remove("open")
-    document.querySelector(".filtroMain").classList.remove("open")
-  }), function () {
-    document.querySelector("header").classList.remove("open")
-    document.querySelector(".filtroMain").classList.remove("open")
-  };
-  $("footer").hover(function () {
-    document.querySelector("header").classList.remove("open")
-    document.querySelector(".filtroMain").classList.remove("open")
-  }), function () {
-    document.querySelector("header").classList.remove("open")
-    document.querySelector(".filtroMain").classList.remove("open")
-  };
-  console.log("movil");
-} else {
-  
+if ($('header').length > 0 ) {
+  if ( window.matchMedia("(max-width: 1201px)").matches) {
+    document.querySelector("header li.fex").addEventListener("click", function(e) {
+      e.preventDefault();
+      document.querySelector("header").classList.toggle("open");    
+      document.querySelector(".filtroMain").classList.toggle("open")      
+    });
+    $("header .fex").hover(function () {
+    }), function () {
+      document.querySelector("header").classList.remove("open")
+      document.querySelector(".filtroMain").classList.remove("open")
+    };
+    $("main").hover(function () {
+      document.querySelector("header").classList.remove("open")
+      document.querySelector(".filtroMain").classList.remove("open")
+    }), function () {
+      document.querySelector("header").classList.remove("open")
+      document.querySelector(".filtroMain").classList.remove("open")
+    };
+    $("footer").hover(function () {
+      document.querySelector("header").classList.remove("open")
+      document.querySelector(".filtroMain").classList.remove("open")
+    }), function () {
+      document.querySelector("header").classList.remove("open")
+      document.querySelector(".filtroMain").classList.remove("open")
+    };
+    console.log("movil");
+  } else {    
+  }
 }
-
 
 
 //$('.marquee-with-options2').marquee({
@@ -159,9 +165,9 @@ $(document).ready(function () {
     if (document.querySelector(".loading .logo").classList.contains("ocultar")) {
       setTimeout(() => {
         document.querySelector(".loading").classList.add("ok")
-      }, 1000)
+      }, 800)
     }
-  }, 800)
+  }, 2000)
   setTimeout(() => {
     document.querySelector("nav").classList.add("ok")
     AOS.init();
@@ -192,12 +198,16 @@ $(document).ready(function () {
     const elementsBloqueDer = document.querySelectorAll(".bloqueDer");
     const elementsSlider = document.querySelectorAll(".swiper-wrapper");
     const elementsSlider2 = document.querySelectorAll(".sliderHome .container");
+    const elementsImgs = document.querySelectorAll("section.woki .container .content");
+    //const elementsImgs2 = document.querySelectorAll("section.woki .container .contentImg.segundo");
 
     addClassToVisibleElements(elementsSlider, "mostrar");
     addClassToVisibleElements(elementsSlider2, "mostrar");
 
     addClassToVisibleElements(elements, "visible");
     addClassToVisibleElements(elementsSlider, "mostrar");
+    addClassToVisibleElements(elementsImgs, "mostrar");
+    //addClassToVisibleElements(elementsImgs2, "mostrar");
 
     window.addEventListener("scroll", function () {
       addClassToVisibleElements(elements, "visible");
@@ -205,9 +215,11 @@ $(document).ready(function () {
       /* PARA BLOQUES */
       addClassToVisibleElements(elementsBloqueIzq, "active");
       addClassToVisibleElements(elementsBloqueDer, "active");
+      addClassToVisibleElements(elementsImgs, "mostrar");
+      //addClassToVisibleElements(elementsImgs2, "mostrar");
     });
 
-  }, 2400);
+  }, 3500);
 
   setTimeout(() => {
     document.querySelector(".submenu").classList.add("ok")
@@ -455,6 +467,10 @@ MyApp = {
             freeMode: false,
             slidesPerView: 1.05,
           },
+          '0': {
+            freeMode: false,
+            slidesPerView: 1.05,
+          },
         },
       });
 
@@ -535,6 +551,9 @@ MyApp = {
             slidesPerView: 2,
           },
           '370': {
+            slidesPerView: 2,
+          },
+          '0': {
             slidesPerView: 2,
           },
         },
@@ -739,6 +758,12 @@ MyApp = {
         }
       }
 
+      document.addEventListener("click", function (e) {
+        if (e.target.closest(".faq-collapsible")) {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+      })
 
       collapsible.forEach((element) => {
         element.addEventListener("click", (element) => {
@@ -795,39 +820,49 @@ MyApp = {
   },
   presentaciones: {
     init: function () {
-      // - Noel Delgado | @pixelia_me
+      const containers = document.querySelectorAll(".listaProductos .item");
+  
+  for (let i = 0; i < containers.length; i++) {
+    const container = containers[i];
+    
+    container.addEventListener("mouseover", (event) => {
+      const rect = container.getBoundingClientRect();
+      const mouseX = event.pageX;
+      const mouseY = event.pageY;
+    
+      const top = rect.top;
+      const bottom = rect.bottom;
+      const left = rect.left;
+      const right = rect.right;
+    
+      if (mouseY < top) {        
+        container.classList.remove("out-bottom");
+        container.classList.add("in-bottom");
+      } else if (mouseY > bottom) {
+        container.classList.remove("out-top");
+        container.classList.add("in-top");
+      }
+    });
+    
+    container.addEventListener("mouseout", (event) => {
+      const rect = container.getBoundingClientRect();
+      const mouseX = event.pageX;
+      const mouseY = event.pageY;
 
-const nodes = [].slice.call(document.querySelectorAll(".listaProductos .item"), 0);
-const directions = { 0: "top", 1: "right", 2: "bottom", 3: "left" };
-const classNames = ["in", "out"]
-  .map((p) => Object.values(directions).map((d) => `${p}-${d}`))
-  .reduce((a, b) => a.concat(b));
-
-const getDirectionKey = (ev, node) => {
-  const { width, height, top, left } = node.getBoundingClientRect();
-  const l = ev.pageX - (left + window.pageXOffset);
-  const t = ev.pageY - (top + window.pageYOffset);
-  const x = l - (width / 2) * (width > height ? height / width : 1);
-  const y = t - (height / 2) * (height > width ? width / height : 1);
-  return Math.round(Math.atan2(y, x) / 1.57079633 + 5) % 4;
-};
-
-class Item {
-  constructor(element) {
-    this.element = element;
-    this.element.addEventListener("mouseover", (ev) => this.update(ev, "in"));
-    this.element.addEventListener("mouseout", (ev) => this.update(ev, "out"));
+      const top = rect.top;
+      const bottom = rect.bottom;
+      const left = rect.left;
+      const right = rect.right;
+    
+      if (mouseY < top) {        
+        container.classList.remove("in-bottom");
+        container.classList.add("out-bottom");
+      } else if (mouseY > bottom) {        
+        container.classList.remove("in-top");
+        container.classList.add("out-top");
+      }
+    });
   }
-
-  update(ev, prefix) {
-    this.element.classList.remove(...classNames);
-    this.element.classList.add(
-      `${prefix}-${directions[getDirectionKey(ev, this.element)]}`
-    );
-  }
-}
-
-nodes.forEach((node) => new Item(node));
     }
   }
 }
